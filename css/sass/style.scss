@@ -240,6 +240,45 @@ ul, li {
   }
 }
 
+
+/* PHOTOGRAPHERS */
+#displays.section {
+
+}
+
+
+/* CONTACT */
+#infos.section {
+  .container {
+    box-sizing: border-box;
+    padding: 0 46px;
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .left, .right, .helper {
+      width: 25%;
+      display: table-cell;
+      vertical-align: middle;
+
+      .center {
+        height: 174px;
+
+        .title {
+          font-family: 'adelon-bold';
+          font-size: 14px;
+        }
+        p {
+          font-family: 'adelon-light';
+          font-size: 11px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+}
+
+
 /* REPSONSIVE */
 @media screen and (max-width: 768px) {
   /* HEADER DESKTOP */

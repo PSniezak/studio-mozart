@@ -218,7 +218,46 @@
 
       <!-- Contact -->
       <div data-anchor="contact" id="infos" class="section">
-        <p>Contact</p>
+        <div class="container">
+          <div class="helper"></div>
+          <div class="left">
+            <div class="center">
+              <span class="title">Réservations</span>
+              <p>
+                booking@studiomozartparis.com<br>
+                request@studiomozartparis.com<br>
+                billing@studiomozartparis.com<br>
+              </p>
+              <br>
+              <span class="title">Adresse</span>
+              <p>
+                96, Avenue Mozart<br>
+                75016, Paris<br>
+                France<br>
+              </p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="center">
+              <span class="title">Adresse</span>
+              <p>
+                métro ligne 09, arrêt Jasmin<br>
+                métro ligne 09, arrêt Michel-Ange — Auteuil<br>
+                métro ligne 10, arrêt Michel-Ange — Auteuil<br>
+                <br>
+                bus 22, arrêt Jasmin<br>
+                bus 22, arrêt Georges Sand — la Fontaine<br>
+                bus 52, arrêt Georges Sand — la Fontaine<br>
+                bus 52, arrêt Michel-Ange — Auteuil<br>
+                <br>
+                station Autolib’ — 2, Avenue Mozart<br>
+                station Autolib’ — 68, Avenue Mozart<br>
+                station Autolib’ — 108, Avenue Mozart<br>
+              </p>
+            </div>
+          </div>
+          <div class="helper"></div>
+        </div>
       </div>
     </div>
 

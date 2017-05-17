@@ -195,6 +195,28 @@ ul, li {
         #questions.section .columns .container p span {
           font-family: 'adelon-bold'; }
 
+/* PHOTOGRAPHERS */
+/* CONTACT */
+#infos.section .container {
+  box-sizing: border-box;
+  padding: 0 46px;
+  display: table;
+  height: 100%;
+  width: 100%; }
+  #infos.section .container .left, #infos.section .container .right, #infos.section .container .helper {
+    width: 25%;
+    display: table-cell;
+    vertical-align: middle; }
+    #infos.section .container .left .center, #infos.section .container .right .center, #infos.section .container .helper .center {
+      height: 174px; }
+      #infos.section .container .left .center .title, #infos.section .container .right .center .title, #infos.section .container .helper .center .title {
+        font-family: 'adelon-bold';
+        font-size: 14px; }
+      #infos.section .container .left .center p, #infos.section .container .right .center p, #infos.section .container .helper .center p {
+        font-family: 'adelon-light';
+        font-size: 11px;
+        line-height: 13px; }
+
 /* REPSONSIVE */
 @media screen and (max-width: 768px) {
   /* HEADER DESKTOP */
