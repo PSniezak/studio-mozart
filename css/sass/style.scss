@@ -10,6 +10,12 @@ a {
   text-decoration: none;
   color: #000;
 }
+ul, li {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .grid-4 {
   width: 25%;
   display: inline-block;
@@ -70,6 +76,59 @@ a {
     img {
       width: 32px;
     }
+  }
+}
+
+
+/* LOCATION */
+#location.section {
+  .left, .right {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .left {
+    box-sizing: border-box;
+    padding: 54px 48px;
+    position: relative;
+
+    .presentation {
+      font-size: 18px;
+      line-height: 20px;
+      text-align: justify;
+    }
+    a {
+      font-size: 14px;
+      font-family: 'adelon-bold';
+    }
+    .proximity {
+      position: absolute;
+      bottom: 54px;
+      width: 300px;
+
+      p {
+        font-size: 14px;
+        font-family: 'adelon-bold';
+      }
+      .name, .opening {
+        width: 50%;
+
+        span {
+          font-size: 11px;
+        }
+      }
+      .name {
+        float: left;
+      }
+      .opening {
+        float: right;
+      }
+    }
+  }
+  .right {
+    background-position: center;
+    background-size: cover;
   }
 }
 
