@@ -8,9 +8,9 @@
 
     <!-- TODO Favicons -->
 
-    <link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
     <!-- Header desktop -->
@@ -222,9 +222,9 @@
       </div>
     </div>
 
-    <script src="/scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/scripts/jquery.fullPage.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/scripts/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/jquery.fullPage.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
