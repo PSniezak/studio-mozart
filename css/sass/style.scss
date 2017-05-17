@@ -2,7 +2,7 @@
 
 
 /* GLOBAL */
-a, p, span {
+a, p, span, h1, h2, h3 {
   font-family: 'adelon-light';
   letter-spacing: 2px;
 }
@@ -20,6 +20,9 @@ ul, li {
   width: 25%;
   display: inline-block;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 /* HEADER DESKTOP */
 #header-desktop {
@@ -27,7 +30,7 @@ ul, li {
   width: 100%; height: 36px;
   position: fixed;
   top: 0; left: 0;
-  padding: 9px 48px 0 48px;
+  padding: 9px 46px 0 46px;
 
   background-color: #fff;
   border-bottom: 1px solid #000;
@@ -90,7 +93,7 @@ ul, li {
   }
   .left {
     box-sizing: border-box;
-    padding: 54px 48px;
+    padding: 54px 46px;
     position: relative;
 
     .presentation {
@@ -132,6 +135,110 @@ ul, li {
   }
 }
 
+
+/* PRICING */
+#pricing.section {
+  padding: 0 46px;
+  display: table;
+  width: 100%;
+
+  .grid-4 {
+    display: table-cell;
+    width: 25%;
+    vertical-align: middle;
+    .price {
+      font-family: 'adelon-bold';
+      font-size: 48px;
+    }
+    .delay {
+      font-family: 'din-medium';
+      font-size: 14px;
+    }
+
+    p {
+      max-width: 95%;
+      color: black;
+      font-size: 11px;
+      line-height: 13px;
+
+      span {
+        color: #9b9b9b;
+        font-family: 'din-light';
+
+        &.supp {
+          font-size: 9px;
+        }
+      }
+    }
+
+    a {
+      margin-top: 78px;
+      width: 205px;
+      display: block;
+      border: 1px solid #000;
+      text-align: center;
+      font-family: 'adelon';
+      font-size: 10px;
+      text-transform: uppercase;
+      padding: 5px 0 3px 0;
+    }
+  }
+}
+
+
+/* QUESTIONS */
+#questions.section {
+  padding: 0 46px;
+
+  .infos {
+    vertical-align: top;
+    margin-top: 72px;
+    p {
+      max-width: 95%;
+      font-family: 'adelon';
+      text-align: justify;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 2px;
+
+      a {
+        text-decoration: underline;
+        font-family: 'adelon-bold';
+      }
+    }
+  }
+  .columns {
+    height: 100%;
+
+    h2 {
+      position: absolute;
+      top: 66px;
+      font-family: 'adelon';
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      box-sizing: border-box;
+      overflow-x: hidden;
+      position: relative;
+      max-height: 100%;
+      padding-top: 78px;
+      padding-bottom: 312px;
+
+      p {
+        overflow-x: scroll;
+        max-width: 95%;
+        font-size: 11px;
+        line-height: 13px;
+
+        span {
+          font-family: 'adelon-bold';
+        }
+      }
+    }
+  }
+}
 
 /* REPSONSIVE */
 @media screen and (max-width: 768px) {

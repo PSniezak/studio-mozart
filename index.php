@@ -150,21 +150,74 @@
 
       <!-- Pricing -->
       <div data-anchor="tarifs" id="pricing" class="section">
-        <p>Tarifs</p>
+        <!-- TODO BO pricing -->
+        <!--
+        <?php for ($i=0; $i < 4; $i++): ?>
+          --><div class="grid-4">
+            <span class="price">149 € <sup>ht</sup></span><br>
+            <span class="delay">½ Journée en semaine</span>
+            <p class="informations">
+              <span>Durée de la location</span><br>
+              10:00 à 15:00 ou 15:00 à 20:00<br>
+              Heure supplémentaire <span class="supp">+50,00 € <sup>TTC</sup></span><br>
+              <br>
+              <span>Matériel compris</span><br>
+              2ﬁElinchrom® BRX 500<br>
+              2ﬁPortalite 66cm<br>
+              Elinchrom® Tripod Set 52-190cm<br>
+              Fond Colorama® L.2,72ﬁl.11m CL265 “Artic White”<br>
+              Elinchrom® Tripod Set 52-190cm<br>
+              Multiprises, ralonges, matériel divers, pinces, gaffer, ...<br>
+              <br>
+              <span>Accomodations</span><br>
+              Wi-fi en fibre optique gratuit<br>
+              Enceintes Bose® companion 5<br>
+              Chargeurs Iphone® 4 à 7s, chargeurs universels<br>
+              Disque dur Western Digital® for Mac 2To à disposition<br>
+              Machine Nespresso® + capsules Nespresso® gratuites<br>
+              Frigidaire 115 litres à disposition (minibar en supplément)<br>
+              Plaques chauffantes, micro-ondes, matériel de cuisine
+            </p>
+
+            <!-- TODO Reservation -->
+            <a href="#">Réserver le studio</a>
+          </div><!--
+        <?php endfor ?>
+        -->
       </div>
 
       <!-- FAQ -->
-      <div data-anchor="faq" id="faq" class="section">
-        <p>FAQ</p>
+      <div data-anchor="faq" id="questions" class="section">
+        <div class="grid-4 infos">
+          <p>
+            SI VOTRE DEMANDE N’EST PAS RÉPERTORIÉE DANS CETTE FOIRE AUX QUESTIONS, VEUILLEZ NOUS CONTACTER À L’ADRESSE SUIVANTE.<br><br>
+            <a href="mailto:request@studiomozartparis.com">request@studiomozartparis.com</a><br><br>
+            TOUTE L’ÉQUIPE SE FERA UN PLAISIR DE VOUS AIDER.
+          </p>
+        </div><!--
+        <?php for ($i=0; $i < 3; $i++): ?>
+        --><div class="grid-4 columns">
+            <h2>Le studio</h2>
+            <div class="container normal-scroll">
+              <?php for ($j=0; $j < 8; $j++): ?>
+                <p>
+                  <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
+                  Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse material@studiomozartparis.com. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
+                </p>
+              <?php endfor ?>
+            </div>
+          </div><!--
+        <?php endfor ?>
+        -->
       </div>
 
       <!-- Photographers -->
-      <div data-anchor="photographes" id="photographes" class="section">
+      <div data-anchor="photographes" id="displays" class="section">
         <p>Photographers</p>
       </div>
 
       <!-- Contact -->
-      <div data-anchor="contact" id="contact" class="section">
+      <div data-anchor="contact" id="infos" class="section">
         <p>Contact</p>
       </div>
     </div>

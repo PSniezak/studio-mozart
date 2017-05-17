@@ -9,3 +9,21 @@
     src: url('/fonts/adelon-light-webfont.woff2') format('woff2'),
          url('/fonts/adelon-light-webfont.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'adelon';
+    src: url('/fonts/adelon_regular-webfont.woff2') format('woff2'),
+         url('/fonts/adelon_regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'din-medium';
+    src: url('/fonts/dinmedium-webfont.woff2') format('woff2'),
+         url('/fonts/dinmedium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'din-light';
+    src: url('/fonts/ufonts.com_din-light-webfont.woff2') format('woff2'),
+         url('/fonts/ufonts.com_din-light-webfont.woff') format('woff');
+}

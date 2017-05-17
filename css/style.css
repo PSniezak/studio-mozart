@@ -6,8 +6,20 @@
   font-family: 'adelon-light';
   src: url("/fonts/adelon-light-webfont.woff2") format("woff2"), url("/fonts/adelon-light-webfont.woff") format("woff"); }
 
+@font-face {
+  font-family: 'adelon';
+  src: url("/fonts/adelon_regular-webfont.woff2") format("woff2"), url("/fonts/adelon_regular-webfont.woff") format("woff"); }
+
+@font-face {
+  font-family: 'din-medium';
+  src: url("/fonts/dinmedium-webfont.woff2") format("woff2"), url("/fonts/dinmedium-webfont.woff") format("woff"); }
+
+@font-face {
+  font-family: 'din-light';
+  src: url("/fonts/ufonts.com_din-light-webfont.woff2") format("woff2"), url("/fonts/ufonts.com_din-light-webfont.woff") format("woff"); }
+
 /* GLOBAL */
-a, p, span {
+a, p, span, h1, h2, h3 {
   font-family: 'adelon-light';
   letter-spacing: 2px; }
 
@@ -25,6 +37,9 @@ ul, li {
   width: 25%;
   display: inline-block; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 /* HEADER DESKTOP */
 #header-desktop {
   box-sizing: border-box;
@@ -33,7 +48,7 @@ ul, li {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 9px 48px 0 48px;
+  padding: 9px 46px 0 46px;
   background-color: #fff;
   border-bottom: 1px solid #000; }
   #header-desktop .grid-4 a {
@@ -76,7 +91,7 @@ ul, li {
 
 #location.section .left {
   box-sizing: border-box;
-  padding: 54px 48px;
+  padding: 54px 46px;
   position: relative; }
   #location.section .left .presentation {
     font-size: 18px;
@@ -104,6 +119,81 @@ ul, li {
 #location.section .right {
   background-position: center;
   background-size: cover; }
+
+/* PRICING */
+#pricing.section {
+  padding: 0 46px;
+  display: table;
+  width: 100%; }
+  #pricing.section .grid-4 {
+    display: table-cell;
+    width: 25%;
+    vertical-align: middle; }
+    #pricing.section .grid-4 .price {
+      font-family: 'adelon-bold';
+      font-size: 48px; }
+    #pricing.section .grid-4 .delay {
+      font-family: 'din-medium';
+      font-size: 14px; }
+    #pricing.section .grid-4 p {
+      max-width: 95%;
+      color: black;
+      font-size: 11px;
+      line-height: 13px; }
+      #pricing.section .grid-4 p span {
+        color: #9b9b9b;
+        font-family: 'din-light'; }
+        #pricing.section .grid-4 p span.supp {
+          font-size: 9px; }
+    #pricing.section .grid-4 a {
+      margin-top: 78px;
+      width: 205px;
+      display: block;
+      border: 1px solid #000;
+      text-align: center;
+      font-family: 'adelon';
+      font-size: 10px;
+      text-transform: uppercase;
+      padding: 5px 0 3px 0; }
+
+/* QUESTIONS */
+#questions.section {
+  padding: 0 46px; }
+  #questions.section .infos {
+    vertical-align: top;
+    margin-top: 72px; }
+    #questions.section .infos p {
+      max-width: 95%;
+      font-family: 'adelon';
+      text-align: justify;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 2px; }
+      #questions.section .infos p a {
+        text-decoration: underline;
+        font-family: 'adelon-bold'; }
+  #questions.section .columns {
+    height: 100%; }
+    #questions.section .columns h2 {
+      position: absolute;
+      top: 66px;
+      font-family: 'adelon';
+      font-size: 18px;
+      text-transform: uppercase; }
+    #questions.section .columns .container {
+      box-sizing: border-box;
+      overflow-x: hidden;
+      position: relative;
+      max-height: 100%;
+      padding-top: 78px;
+      padding-bottom: 312px; }
+      #questions.section .columns .container p {
+        overflow-x: scroll;
+        max-width: 95%;
+        font-size: 11px;
+        line-height: 13px; }
+        #questions.section .columns .container p span {
+          font-family: 'adelon-bold'; }
 
 /* REPSONSIVE */
 @media screen and (max-width: 768px) {
