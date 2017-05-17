@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'adelon-bold';
+  src: url("/fonts/adelon-bold-webfont.woff2") format("woff2"), url("/fonts/adelon-bold-webfont.woff") format("woff"); }
+
+@font-face {
+  font-family: 'adelon-light';
+  src: url("/fonts/adelon-light-webfont.woff2") format("woff2"), url("/fonts/adelon-light-webfont.woff") format("woff"); }
+
+/* GLOBAL */
+a, p, span {
+  font-family: 'adelon-light';
+  letter-spacing: 2px; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.grid-4 {
+  width: 25%;
+  display: inline-block; }
+
+/* HEADER DESKTOP */
+#header-desktop {
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 9px 48px 0 48px;
+  background-color: #fff;
+  border-bottom: 1px solid #000; }
+  #header-desktop .grid-4 a {
+    font-size: 12px; }
+  #header-desktop .grid-4.logo a {
+    text-transform: uppercase;
+    font-family: 'adelon-bold'; }
+  #header-desktop .grid-4.menu a {
+    margin-right: 16px; }
+  #header-desktop .grid-4.social {
+    text-align: right; }
+    #header-desktop .grid-4.social a {
+      padding-left: 26px; }
+
+/* HEADER MOBILE */
+#header-mobile {
+  display: none; }
+
+/* HOME */
+#home.section .main-background {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover; }
+
+#home.section .arrow {
+  position: absolute;
+  bottom: 64px;
+  left: calc(50% - 32px);
+  cursor: pointer; }
+  #home.section .arrow img {
+    width: 32px; }
+
+/* REPSONSIVE */
+@media screen and (max-width: 768px) {
+  /* HEADER DESKTOP */
+  #header-desktop {
+    display: none; }
+  /* HEADER MOBILE */
+  #header-mobile {
+    display: block; } }

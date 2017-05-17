@@ -1,0 +1,25 @@
+{
+  "name": "studio-mozart",
+  "version": "1.0.0",
+  "description": "Développement site Studio Mozart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSniezak/studio-mozart.git"
+  },
+  "author": "Paul Sniezak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PSniezak/studio-mozart/issues"
+  },
+  "homepage": "https://github.com/PSniezak/studio-mozart#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
