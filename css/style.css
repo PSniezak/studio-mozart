@@ -183,12 +183,14 @@ ul, li {
     #questions.section .columns .container {
       box-sizing: border-box;
       overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
       position: relative;
       max-height: 100%;
       padding-top: 78px;
       padding-bottom: 312px; }
       #questions.section .columns .container p {
         overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
         max-width: 95%;
         font-size: 11px;
         line-height: 13px; }
@@ -196,6 +198,43 @@ ul, li {
           font-family: 'adelon-bold'; }
 
 /* PHOTOGRAPHERS */
+#displays.section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex; }
+  #displays.section .container {
+    box-sizing: border-box;
+    padding: 54px 46px;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -webkit-overflow-scrolling: touch; }
+    #displays.section .container .item {
+      box-sizing: border-box;
+      margin-bottom: 32px; }
+      #displays.section .container .item:not(:nth-child(4n+0)) {
+        padding-right: 48px; }
+      #displays.section .container .item:last-child {
+        margin-bottom: 260px; }
+      #displays.section .container .item .main-picture {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer; }
+      #displays.section .container .item .name {
+        width: 100%;
+        cursor: pointer; }
+        #displays.section .container .item .name p {
+          text-align: center;
+          font-family: 'adelon-bold';
+          font-size: 18px; }
+
 /* CONTACT */
 #infos.section .container {
   box-sizing: border-box;

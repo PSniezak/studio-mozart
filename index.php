@@ -8,9 +8,9 @@
 
     <!-- TODO Favicons -->
 
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
   </head>
   <body>
     <!-- Header desktop -->
@@ -213,7 +213,16 @@
 
       <!-- Photographers -->
       <div data-anchor="photographes" id="displays" class="section">
-        <p>Photographers</p>
+        <div class="container normal-scroll">
+          <!--
+          <?php for ($i=0; $i < 12; $i++): ?>
+          --><div class="grid-4 item">
+              <div class="main-picture" style="background-image: url('/img/temp/photo.jpg')"></div>
+              <div class="name"><p>Calypso Mahieu</p></div>
+            </div><!--
+          <?php endfor; ?>
+          -->
+        </div>
       </div>
 
       <!-- Contact -->
@@ -261,9 +270,9 @@
       </div>
     </div>
 
-    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="scripts/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

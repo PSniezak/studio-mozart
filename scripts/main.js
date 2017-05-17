@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var lastScrollTop = 0;
 
   // Main Fullpage.js initialization
   $('#fullpage').fullpage({
@@ -12,28 +13,51 @@ $(document).ready(function() {
 		verticalCentered: false,
 		fixedElements: '#header-desktop, #header-mobile',
 		lazyLoading: true,
+    touchSensitivity: 15,
+    normalScrollElementTouchThreshold: 15,
 
 		onLeave: function(index, nextIndex, direction) {
-      if (nextIndex == 5) {
-        setTimeout(function() {
-          $('#questions .columns .container').scrollTop(0);
-        }, 700);
-      }
-    },
-		afterLoad: function(anchorLink, index) {
-    },
-		afterRender: function(){},
-		afterResize: function(){},
-		afterResponsive: function(isResponsive){},
-		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+      // if (nextIndex == 5) {
+      //   setTimeout(function() {
+      //     $('#questions .columns .container').scrollTop(5);
+      //   }, 700);
+      // }
+      // if (nextIndex == 6) {
+      //   setTimeout(function() {
+      //     $('#displays .container').scrollTop(5);
+      //   }, 700);
+      // }
+    }
 	});
 
   // FAQ
   $('#questions .columns .container').scroll(function() {
-    if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-      $.fn.fullpage.moveSectionDown();
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+      if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+        $.fn.fullpage.moveSectionDown();
+      }
+    } else {
+      if($(this).scrollTop() == 0) {
+        $.fn.fullpage.moveSectionUp();
+      }
     }
+    lastScrollTop = st;
+  });
+
+  // Photographers
+  $('#displays .container').scroll(function() {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+      if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+        $.fn.fullpage.moveSectionDown();
+      }
+    } else {
+      if($(this).scrollTop() == 0) {
+        $.fn.fullpage.moveSectionUp();
+      }
+    }
+    lastScrollTop = st;
   });
 
 });
