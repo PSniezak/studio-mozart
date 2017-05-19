@@ -1,49 +1,15 @@
 <?php
 
 require_once 'vendor/autoload.php';
+$directus_url = "https://admin.studio-mozart.pezak.ovh/";
 
-$client = \Directus\SDK\ClientFactory::create('user-token', [
-    'base_url' => 'https://admin.studio-mozart.pezak.ovh',
+$client = \Directus\SDK\ClientFactory::create('ShUhl3apZ0vZlYQqWHJlg5NNuxb0NeYK', [
+    'base_url' => $directus_url,
     'version' => '1'
 ]);
 
 $prices = $client->getItems('prices');
-foreach($prices as $price) {
-    echo $price->price . '<br>';
-}
-
-// $config = [
-//     'database' => [
-//         'hostname' => 'localhost',
-//         'username' => 'root',
-//         'password' => 'paulsniezak123.',
-//         'database' => 'studio-mozart',
-//     ],
-//     'filesystem' => [
-//         'root' => '/storage/uploads'
-//     ]
-// ];
-//
-// $client = \Directus\SDK\ClientFactory::create($config);
-// $articles = $client->getItems('prices');
-//
-// foreach($articles as $article) {
-//     echo $article->price . '<br>';
-// }
-
-// include 'db.php';
-//
-// // Prices
-// $sth = $pdo->prepare('SELECT * FROM prices WHERE active = 1 ORDER BY price ASC');
-// $sth->execute();
-//
-// $prices = $sth->fetchAll();
-//
-// // Photographers
-// $sth = $pdo->prepare('SELECT * FROM photographers WHERE active = 1');
-// $sth->execute();
-//
-// $photographers = $sth->fetchAll();
+$photographers = $client->getItems('photographers');
 
 ?>
 
@@ -200,7 +166,7 @@ foreach($prices as $price) {
       <!-- Pricing -->
       <div data-anchor="tarifs" id="pricing" class="section">
         <!--
-        <?php ?>
+        <?php foreach($prices as $price): ?>
           --><div class="grid-4">
             <span class="price"><?php echo $price->price ?> € <sup>ht</sup></span><br>
             <span class="delay"><?php echo $price->timing ?></span>
@@ -230,7 +196,7 @@ foreach($prices as $price) {
             <!-- TODO Reservation -->
             <a href="#">Réserver le studio</a>
           </div><!--
-        <?php  ?>
+        <?php endforeach; ?>
         -->
       </div>
 
@@ -263,12 +229,12 @@ foreach($prices as $price) {
       <div data-anchor="photographes" id="displays" class="section">
         <div class="container normal-scroll">
           <!--
-          <?php  ?>
+          <?php foreach($photographers as $photographer): ?>
           --><div class="grid-4 item">
-              <div class="main-picture" style="background-image: url('https://admin.studio-mozart.pezak.ovh/media/7.jpg')"></div>
+              <div class="main-picture" style="background-image: url('<?php echo $directus_url . $photographer->cover->url; ?>')"></div>
               <div class="name"><p>Calypso Mahieu</p></div>
             </div><!--
-          <?php ?>
+          <?php endforeach; ?>
           -->
         </div>
       </div>
