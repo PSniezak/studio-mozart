@@ -1,0 +1,19 @@
+{
+    "name": "paulsniezak/studio-mozart",
+    "authors": [
+        {
+            "name": "PSniezak",
+            "email": "paulsniezak@gmail.com"
+        }
+    ],
+    "require": {
+      "directus/sdk": "0.1.*"
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/wellingguzman/zend-db"
+      }
+  ]
+}
