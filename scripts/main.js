@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  var lastScrollTop = 0;
+  var lastScrollTop = 0,
+      isMobile = false;
 
   // Mobile
   if (window.innerWidth < 768) {
@@ -54,6 +55,25 @@ $(document).ready(function() {
     $('#header-mobile .menu-icon .hamb-menu').removeClass('is-clicked');
     $('.header-mobile-menu').hide("slide", { direction: "down" }, 500);
   });
+
+  // Location
+  if (isMobile) {
+    $('#location .container').addClass('normal-scroll');
+
+    $('#location .container').scroll(function() {
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+          $.fn.fullpage.moveSectionDown();
+        }
+      } else {
+        if($(this).scrollTop() == 0) {
+          $.fn.fullpage.moveSectionUp();
+        }
+      }
+      lastScrollTop = st;
+    });
+  }
 
   // FAQ
   $('#questions .columns .container').scroll(function() {

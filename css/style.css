@@ -191,42 +191,43 @@ ul, li {
     width: 32px; }
 
 /* LOCATION */
-#location.section .left, #location.section .right {
-  width: 50%;
-  height: 100%;
-  display: inline-block;
-  vertical-align: top; }
-
-#location.section .left {
-  box-sizing: border-box;
-  padding: 54px 46px;
-  position: relative; }
-  #location.section .left .presentation {
-    font-size: 18px;
-    line-height: 20px;
-    text-align: justify; }
-  #location.section .left a {
-    font-size: 14px;
-    font-family: 'adelon-bold'; }
-  #location.section .left .proximity {
-    position: absolute;
-    bottom: 54px;
-    width: 300px; }
-    #location.section .left .proximity p {
+#location.section .container {
+  width: 100%;
+  height: 100%; }
+  #location.section .container .left, #location.section .container .right {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top; }
+  #location.section .container .left {
+    box-sizing: border-box;
+    padding: 54px 46px;
+    position: relative; }
+    #location.section .container .left .presentation {
+      font-size: 18px;
+      line-height: 20px;
+      text-align: justify; }
+    #location.section .container .left a {
       font-size: 14px;
       font-family: 'adelon-bold'; }
-    #location.section .left .proximity .name, #location.section .left .proximity .opening {
-      width: 50%; }
-      #location.section .left .proximity .name span, #location.section .left .proximity .opening span {
-        font-size: 11px; }
-    #location.section .left .proximity .name {
-      float: left; }
-    #location.section .left .proximity .opening {
-      float: right; }
-
-#location.section .right {
-  background-position: center;
-  background-size: cover; }
+    #location.section .container .left .proximity {
+      position: absolute;
+      bottom: 54px;
+      width: 300px; }
+      #location.section .container .left .proximity p {
+        font-size: 14px;
+        font-family: 'adelon-bold'; }
+      #location.section .container .left .proximity .name, #location.section .container .left .proximity .opening {
+        width: 50%; }
+        #location.section .container .left .proximity .name span, #location.section .container .left .proximity .opening span {
+          font-size: 11px; }
+      #location.section .container .left .proximity .name {
+        float: left; }
+      #location.section .container .left .proximity .opening {
+        float: right; }
+  #location.section .container .right {
+    background-position: center;
+    background-size: cover; }
 
 /* PRICING */
 #pricing.section {
@@ -413,4 +414,34 @@ ul, li {
     display: block; }
   /* HOME */
   #home.section .arrow {
-    bottom: 26px; } }
+    bottom: 26px; }
+  /* LOCATION */
+  #location.section .container {
+    overflow-x: hidden;
+    max-height: 100%; }
+    #location.section .container .left, #location.section .container .right {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 36px 36px 0 36px; }
+    #location.section .container .left .presentation p {
+      margin: 0; }
+    #location.section .container .left .presentation a {
+      display: block;
+      margin-top: 32px;
+      margin-bottom: 32px; }
+    #location.section .container .left .proximity {
+      overflow: hidden;
+      position: relative;
+      bottom: auto;
+      width: 100%;
+      text-align: center;
+      max-width: 198px;
+      margin: auto;
+      margin-bottom: 48px; }
+      #location.section .container .left .proximity .name {
+        text-align: left; }
+      #location.section .container .left .proximity .opening {
+        text-align: right; }
+    #location.section .container .right {
+      height: 100vh; } }

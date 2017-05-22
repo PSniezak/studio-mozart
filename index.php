@@ -28,7 +28,6 @@ $photographers = $client->getItems('photographers');
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
   </head>
   <body>
-    <!-- Header desktop -->
     <div id="header-desktop">
       <div class="grid-4 logo">
         <a href="#accueil">Studio Mozart</a>
@@ -52,7 +51,6 @@ $photographers = $client->getItems('photographers');
       </div>
     </div>
 
-    <!-- Header mobile -->
     <div id="header-mobile">
       <div class="menu-icon">
         <span class="hamb-menu"></span>
@@ -97,98 +95,100 @@ $photographers = $client->getItems('photographers');
 
       <!-- Location -->
       <div data-anchor="lieu" id="location" class="section">
-        <div class="left">
-          <div class="presentation">
-            <p>
-              Le Studio Mozart se situe dans le quartier d’Auteuil, dans un environnement calme, dans le XVIème arrondissement de Paris. Situé au 6ème étage, avec ascenceur et sans vis-à-vis d’un immeuble classé datant des années 30, le studio Mozart jouit d’un balcon orienté plein sud.<br/><br/>
-              Le Studio Mozart a conservé les éléments de l’ancien : parquet, moulures. Très ensoleillé, il dispose d’une belle hauteur sous plafond (3m30) et d’une excellente luminosité. Refait à neuf dans un esprit contemporain. Il dispose de 15 prises situées au extrémités de la pièce principale, permettant ainsi un grand nombre de branchements.<br/><br/>
-              Le Studio Mozart dispose également d’une cuisine toute équipée ainsi qu’une douche prête à l’emploi.
-            </p>
-            <br>
-            <!-- TODO PDF link -->
-            <a href="#">Télécharger le plan du Studio Mozart</a>
-          </div>
+        <div class="container">
+          <div class="left">
+            <div class="presentation">
+              <p>
+                Le Studio Mozart se situe dans le quartier d’Auteuil, dans un environnement calme, dans le XVIème arrondissement de Paris. Situé au 6ème étage, avec ascenceur et sans vis-à-vis d’un immeuble classé datant des années 30, le studio Mozart jouit d’un balcon orienté plein sud.<br/><br/>
+                Le Studio Mozart a conservé les éléments de l’ancien : parquet, moulures. Très ensoleillé, il dispose d’une belle hauteur sous plafond (3m30) et d’une excellente luminosité. Refait à neuf dans un esprit contemporain. Il dispose de 15 prises situées au extrémités de la pièce principale, permettant ainsi un grand nombre de branchements.<br/><br/>
+                Le Studio Mozart dispose également d’une cuisine toute équipée ainsi qu’une douche prête à l’emploi.
+              </p>
+              <br>
+              <!-- TODO PDF link -->
+              <a href="#">Télécharger le plan du Studio Mozart</a>
+            </div>
 
-          <div class="proximity">
-            <p>Dans un rayon de 100m</p>
+            <div class="proximity">
+              <p>Dans un rayon de 100m</p>
 
-            <ul>
-              <li>
-                <div class="name">
-                  <span>Monoprix</span>
-                </div>
-                <div class="opening">
-                  <span>09:00 à 22:00</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Le Polo Burger</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Domino’s Pizza</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Magasin photo</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Pressing</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Pharmacie</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Poste</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Quinquallerie</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-              <li>
-                <div class="name">
-                  <span>Bnp</span>
-                </div>
-                <div class="opening">
-                  <span>10:00 à 20:30</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div><!--
-        --><div class="right" style="background-image: url('/img/location.jpg')"></div>
+              <ul>
+                <li>
+                  <div class="name">
+                    <span>Monoprix</span>
+                  </div>
+                  <div class="opening">
+                    <span>09:00 à 22:00</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Le Polo Burger</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Domino’s Pizza</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Magasin photo</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Pressing</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Pharmacie</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Poste</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Quinquallerie</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span>Bnp</span>
+                  </div>
+                  <div class="opening">
+                    <span>10:00 à 20:30</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div><!--
+          --><div class="right" style="background-image: url('/img/location.jpg')"></div>
+        </div>
       </div>
 
       <!-- Pricing -->
@@ -312,7 +312,6 @@ $photographers = $client->getItems('photographers');
       </div>
     </div>
 
-    <!-- Photographers slideshows -->
     <div id="slideshows">
       <div class="close-button">
         <img src="img/close.png" alt="X">
