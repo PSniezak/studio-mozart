@@ -452,16 +452,18 @@ ul, li {
       height: 100vh; }
   /* PRICING */
   #pricing.section, .pricing-multiple.section {
-    padding: 0 36px; }
+    padding: 0 26px;
+    padding-top: 26px; }
     #pricing.section .grid-4, .pricing-multiple.section .grid-4 {
       text-align: center; }
       #pricing.section .grid-4 .informations, .pricing-multiple.section .grid-4 .informations {
         margin-right: 0;
-        max-width: 100%; }
+        max-width: 100%;
+        line-height: 12px; }
       #pricing.section .grid-4 a, .pricing-multiple.section .grid-4 a {
-        margin: 36px auto 0 auto; }
+        margin: 26px auto 0 auto; }
       #pricing.section .grid-4 .next-slide, .pricing-multiple.section .grid-4 .next-slide {
-        margin-top: 36px;
+        margin-top: 26px;
         display: block;
         text-align: center; }
         #pricing.section .grid-4 .next-slide p, .pricing-multiple.section .grid-4 .next-slide p {
