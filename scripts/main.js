@@ -1,17 +1,19 @@
 $(document).ready(function() {
+
   var lastScrollTop = 0;
 
   // Main Fullpage.js initialization
   $('#fullpage').fullpage({
 		menu: '#header-desktop, #header-mobile',
 		normalScrollElements: '.normal-scroll',
+    animateAnchor: false,
 		scrollOverflow: false,
 		scrollOverflowReset: false,
 		scrollOverflowOptions: null,
     paddingTop: '36px',
 		controlArrows: true,
 		verticalCentered: false,
-		fixedElements: '#header-desktop, #header-mobile',
+		fixedElements: '#header-desktop, #header-mobile, #slideshows',
 		lazyLoading: true,
     touchSensitivity: 15,
     normalScrollElementTouchThreshold: 15,
@@ -46,6 +48,7 @@ $(document).ready(function() {
   });
 
   // Photographers
+  // Overflowed
   if ($('#displays .container .item:last-child').offset().top + $('#displays .container .item:last-child').height() - $('#displays').offset().top > $(document).height()) {
     $('#displays .container').addClass('normal-scroll');
 
@@ -63,5 +66,26 @@ $(document).ready(function() {
       lastScrollTop = st;
     });
   }
+  // Slideshows
+  $('#displays .container .item').on('click', function() {
+    var photographerId = $(this).data('id');
+
+    if (!$("#slideshows .slideshow[data-id='" + photographerId+"']").hasClass('slick-initialized')) {
+      $("#slideshows .slideshow[data-id='" + photographerId+"']").slick({
+        infinite: false,
+        arrows: false,
+        variableWidth: true,
+        adaptiveHeight: true,
+        lazyLoad: 'progressive'
+      });
+    }
+
+    $("#slideshows .slideshow[data-id='" + photographerId+"']").addClass('active').fadeIn();
+    $("#slideshows .close-button").fadeIn();
+  });
+  $('.close-button').on('click', function() {
+    $('.slideshow.active').removeClass('active').fadeOut();
+    $("#slideshows .close-button").fadeOut();
+  });
 
 });

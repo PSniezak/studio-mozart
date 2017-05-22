@@ -1,11 +1,10 @@
 <?php
 
 require_once 'vendor/autoload.php';
-$directus_url = "https://admin.studio-mozart.pezak.ovh/";
+$directus_url = "https://admin.studio-mozart.pezak.ovh";
 
 $client = \Directus\SDK\ClientFactory::create('ShUhl3apZ0vZlYQqWHJlg5NNuxb0NeYK', [
-    'base_url' => $directus_url,
-    'version' => '1'
+    'base_url' => $directus_url
 ]);
 
 $prices = $client->getItems('prices');
@@ -231,7 +230,7 @@ $photographers = $client->getItems('photographers');
         <div class="container">
           <!--
           <?php foreach($photographers as $photographer): ?>
-          --><div class="grid-4 item">
+          --><div class="grid-4 item" data-id="<?php echo $photographer->id ?>">
               <div class="main-picture" style="background-image: url('<?php echo $directus_url . $photographer->cover->url; ?>')"></div>
               <div class="name"><p>Calypso Mahieu</p></div>
             </div><!--
@@ -283,6 +282,23 @@ $photographers = $client->getItems('photographers');
           <div class="helper"></div>
         </div>
       </div>
+    </div>
+
+    <!-- Photographers slideshows -->
+    <div id="slideshows">
+      <div class="close-button">
+        <img src="img/close.png" alt="X">
+      </div>
+
+      <?php foreach ($photographers as $photographer): ?>
+        <div class="slideshow" data-id="<?php echo $photographer->id; ?>">
+          <?php foreach ($photographer->medias as $media): ?>
+            <div class="container">
+              <img data-lazy="<?php echo $directus_url . $media->url ?>" alt="<?php echo $media->title . " - " . $media->tags ?>">
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endforeach; ?>
     </div>
 
     <script src="/scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>

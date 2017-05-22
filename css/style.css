@@ -256,6 +256,45 @@ ul, li {
         font-size: 11px;
         line-height: 13px; }
 
+/* SLIDESHOWS */
+#slideshows * {
+  outline: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#slideshows .close-button {
+  display: none;
+  position: absolute;
+  z-index: 11;
+  width: 44px;
+  height: 44px;
+  top: calc(36px + 16px);
+  right: 52px;
+  cursor: pointer; }
+
+#slideshows .slideshow {
+  display: none;
+  margin-top: 36px;
+  padding: 36px 0 36px 46px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; }
+  #slideshows .slideshow .container {
+    box-sizing: border-box;
+    padding-right: 36px; }
+    #slideshows .slideshow .container:last-child {
+      padding-right: 900px; }
+    #slideshows .slideshow .container img {
+      max-height: calc(100vh - 112px); }
+
 /* REPSONSIVE */
 @media screen and (max-width: 768px) {
   /* HEADER DESKTOP */
