@@ -46,18 +46,22 @@ $(document).ready(function() {
   });
 
   // Photographers
-  $('#displays .container').scroll(function() {
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop){
-      if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-        $.fn.fullpage.moveSectionDown();
+  if ($('#displays .container .item:last-child').offset().top + $('#displays .container .item:last-child').height() - $('#displays').offset().top > $(document).height()) {
+    $('#displays .container').addClass('normal-scroll');
+
+    $('#displays .container').scroll(function() {
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+          $.fn.fullpage.moveSectionDown();
+        }
+      } else {
+        if($(this).scrollTop() == 0) {
+          $.fn.fullpage.moveSectionUp();
+        }
       }
-    } else {
-      if($(this).scrollTop() == 0) {
-        $.fn.fullpage.moveSectionUp();
-      }
-    }
-    lastScrollTop = st;
-  });
+      lastScrollTop = st;
+    });
+  }
 
 });

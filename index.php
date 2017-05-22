@@ -227,7 +227,7 @@ $photographers = $client->getItems('photographers');
 
       <!-- Photographers -->
       <div data-anchor="photographes" id="displays" class="section">
-        <div class="container normal-scroll">
+        <div class="container">
           <!--
           <?php foreach($photographers as $photographer): ?>
           --><div class="grid-4 item">
