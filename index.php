@@ -24,6 +24,7 @@ $photographers = $client->getItems('photographers');
     <!-- TODO Favicons -->
 
     <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
   </head>
@@ -287,6 +288,7 @@ $photographers = $client->getItems('photographers');
     <script src="/scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/slick.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
