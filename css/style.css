@@ -560,4 +560,27 @@ ul, li {
           #displays.section .container .item .name p {
             text-align: center;
             font-family: 'adelon-bold';
-            font-size: 11px; } }
+            font-size: 11px; }
+  /* CONTACT */
+  #infos.section .container {
+    padding: 0 36px;
+    display: block;
+    height: 100%;
+    width: 100%; }
+    #infos.section .container .left, #infos.section .container .right, #infos.section .container .helper {
+      width: 100%;
+      text-align: center;
+      display: block;
+      vertical-align: middle; }
+      #infos.section .container .left .center, #infos.section .container .right .center, #infos.section .container .helper .center {
+        height: 174px; }
+        #infos.section .container .left .center .title, #infos.section .container .right .center .title, #infos.section .container .helper .center .title {
+          font-family: 'adelon-bold';
+          font-size: 14px; }
+        #infos.section .container .left .center p, #infos.section .container .right .center p, #infos.section .container .helper .center p {
+          font-family: 'adelon-light';
+          font-size: 11px;
+          line-height: 13px; }
+    #infos.section .container .left {
+      margin-top: 38%;
+      margin-bottom: 72px; } }

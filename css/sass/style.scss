@@ -747,4 +747,40 @@ ul, li {
       }
     }
   }
+
+
+  /* CONTACT */
+  #infos.section {
+    .container {
+      padding: 0 36px;
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      .left, .right, .helper {
+        width: 100%;
+        text-align: center;
+        display: block;
+        vertical-align: middle;
+
+        .center {
+          height: 174px;
+
+          .title {
+            font-family: 'adelon-bold';
+            font-size: 14px;
+          }
+          p {
+            font-family: 'adelon-light';
+            font-size: 11px;
+            line-height: 13px;
+          }
+        }
+      }
+      .left {
+        margin-top: 38%;
+        margin-bottom: 72px;
+      }
+    }
+  }
 }

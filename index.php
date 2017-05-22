@@ -63,7 +63,7 @@ $photographers = $client->getItems('photographers');
       <div class="header-mobile-menu">
         <div class="container">
           <a href="#lieu">Le Lieu</a>
-          <a href="#tarifs">Tarifs</a>
+          <a href="#tarif0">Tarifs</a>
           <a href="#faq">FAQ</a>
           <a href="#photographes">Photographes</a>
 
@@ -297,7 +297,7 @@ $photographers = $client->getItems('photographers');
           </div>
           <div class="right">
             <div class="center">
-              <span class="title">Adresse</span>
+              <span class="title">Se rendre au Studio Mozart</span>
               <p>
                 métro ligne 09, arrêt Jasmin<br>
                 métro ligne 09, arrêt Michel-Ange — Auteuil<br>
