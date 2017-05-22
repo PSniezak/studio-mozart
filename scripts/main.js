@@ -4,7 +4,7 @@ $(document).ready(function() {
       isMobile = false;
 
   // Mobile
-  if (window.innerWidth < 768) {
+  if (screen.height < 768) {
     $('html').addClass('mobile');
     isMobile = true;
 
