@@ -272,44 +272,49 @@ ul, li {
 
 /* QUESTIONS */
 #questions.section {
-  padding: 0 46px; }
-  #questions.section .infos {
-    vertical-align: top;
-    margin-top: 72px; }
-    #questions.section .infos p {
-      max-width: 95%;
-      font-family: 'adelon';
-      text-align: justify;
-      font-size: 18px;
-      line-height: 20px;
-      letter-spacing: 2px; }
-      #questions.section .infos p a {
-        text-decoration: underline;
-        font-family: 'adelon-bold'; }
-  #questions.section .columns {
+  padding: 0 46px;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+  #questions.section .helper {
+    max-height: 100%;
     height: 100%; }
-    #questions.section .columns h2 {
-      position: absolute;
-      top: 66px;
-      font-family: 'adelon';
-      font-size: 18px;
-      text-transform: uppercase; }
-    #questions.section .columns .container {
-      box-sizing: border-box;
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      position: relative;
-      max-height: 100%;
-      padding-top: 78px;
-      padding-bottom: 175%; }
-      #questions.section .columns .container p {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
+    #questions.section .helper .infos {
+      vertical-align: top;
+      margin-top: 72px; }
+      #questions.section .helper .infos p {
         max-width: 95%;
-        font-size: 11px;
-        line-height: 13px; }
-        #questions.section .columns .container p span {
+        font-family: 'adelon';
+        text-align: justify;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 2px; }
+        #questions.section .helper .infos p a {
+          text-decoration: underline;
           font-family: 'adelon-bold'; }
+    #questions.section .helper .columns {
+      max-height: 100%;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch; }
+      #questions.section .helper .columns h2 {
+        position: absolute;
+        top: 66px;
+        font-family: 'adelon';
+        font-size: 18px;
+        text-transform: uppercase; }
+      #questions.section .helper .columns .container {
+        box-sizing: border-box;
+        position: relative;
+        max-height: 100%;
+        padding-top: 78px;
+        padding-bottom: 175%; }
+        #questions.section .helper .columns .container p {
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+          max-width: 95%;
+          font-size: 11px;
+          line-height: 13px; }
+          #questions.section .helper .columns .container p span {
+            font-family: 'adelon-bold'; }
 
 /* PHOTOGRAPHERS */
 #displays.section {
@@ -473,4 +478,46 @@ ul, li {
           margin-bottom: 2px; }
         #pricing.section .grid-4 .next-slide img, .pricing-multiple.section .grid-4 .next-slide img {
           width: 16px;
-          height: auto; } }
+          height: auto; }
+  /* QUESTIONS */
+  #questions.section {
+    padding: 0 36px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; }
+    #questions.section .helper {
+      max-height: 100%;
+      height: 100%; }
+      #questions.section .helper .infos {
+        width: 100%;
+        height: auto;
+        display: block; }
+        #questions.section .helper .infos p {
+          max-width: 100%;
+          text-align: center; }
+          #questions.section .helper .infos p a {
+            text-decoration: underline;
+            font-family: 'adelon-bold'; }
+      #questions.section .helper .columns {
+        text-align: justify;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        display: block;
+        overflow-x: visible;
+        -webkit-overflow-scrolling: auto; }
+        #questions.section .helper .columns h2 {
+          text-align: center;
+          position: relative;
+          top: 0;
+          padding-top: 24px; }
+        #questions.section .helper .columns .container {
+          box-sizing: border-box;
+          position: relative;
+          padding-top: 0px;
+          padding-bottom: 0%; }
+          #questions.section .helper .columns .container p {
+            overflow-x: visible;
+            -webkit-overflow-scrolling: auto;
+            max-width: 100%; }
+        #questions.section .helper .columns:last-child .container {
+          padding-bottom: 100%; } }

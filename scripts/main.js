@@ -88,19 +88,38 @@ $(document).ready(function() {
   }
 
   // FAQ
-  $('#questions .columns .container').scroll(function() {
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop){
-      if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-        $.fn.fullpage.moveSectionDown();
+  if (isMobile) {
+    $('#questions .helper .columns .container').removeClass('normal-scroll');
+    $('#questions .helper').addClass('normal-scroll');
+
+    $('#questions').scroll(function() {
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+          $.fn.fullpage.moveSectionDown();
+        }
+      } else {
+        if($(this).scrollTop() == 0) {
+          $.fn.fullpage.moveSectionUp();
+        }
       }
-    } else {
-      if($(this).scrollTop() == 0) {
-        $.fn.fullpage.moveSectionUp();
+      lastScrollTop = st;
+    });
+  } else {
+    $('#questions .helper .columns').scroll(function() {
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+          $.fn.fullpage.moveSectionDown();
+        }
+      } else {
+        if($(this).scrollTop() == 0) {
+          $.fn.fullpage.moveSectionUp();
+        }
       }
-    }
-    lastScrollTop = st;
-  });
+      lastScrollTop = st;
+    });
+  }
 
   // Photographers
   // Overflowed

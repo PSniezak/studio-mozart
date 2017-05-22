@@ -235,27 +235,29 @@ $photographers = $client->getItems('photographers');
 
       <!-- FAQ -->
       <div data-anchor="faq" id="questions" class="section">
-        <div class="grid-4 infos">
-          <p>
-            SI VOTRE DEMANDE N’EST PAS RÉPERTORIÉE DANS CETTE FOIRE AUX QUESTIONS, VEUILLEZ NOUS CONTACTER À L’ADRESSE SUIVANTE.<br><br>
-            <a href="mailto:request@studiomozartparis.com">request@studiomozartparis.com</a><br><br>
-            TOUTE L’ÉQUIPE SE FERA UN PLAISIR DE VOUS AIDER.
-          </p>
-        </div><!--
-        <?php for ($i=0; $i < 3; $i++): ?>
-        --><div class="grid-4 columns">
-            <h2>Le studio</h2>
-            <div class="container normal-scroll">
-              <?php for ($j=0; $j < 8; $j++): ?>
-                <p>
-                  <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
-                  Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse material@studiomozartparis.com. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
-                </p>
-              <?php endfor ?>
-            </div>
+        <div class="helper">
+          <div class="grid-4 infos">
+            <p>
+              SI VOTRE DEMANDE N’EST PAS RÉPERTORIÉE DANS CETTE FOIRE AUX QUESTIONS, VEUILLEZ NOUS CONTACTER À L’ADRESSE SUIVANTE.<br><br>
+              <a href="mailto:request@studiomozartparis.com">request@studiomozartparis.com</a><br><br>
+              TOUTE L’ÉQUIPE SE FERA UN PLAISIR DE VOUS AIDER.
+            </p>
           </div><!--
-        <?php endfor ?>
-        -->
+          <?php for ($i=0; $i < 3; $i++): ?>
+          --><div class="grid-4 columns">
+              <h2>Le studio</h2>
+              <div class="container normal-scroll">
+                <?php for ($j=0; $j < 8; $j++): ?>
+                  <p>
+                    <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
+                    Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse material@studiomozartparis.com. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
+                  </p>
+                <?php endfor ?>
+              </div>
+            </div><!--
+          <?php endfor ?>
+          -->
+        </div>
       </div>
 
       <!-- Photographers -->
