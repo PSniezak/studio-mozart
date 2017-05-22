@@ -54,8 +54,36 @@ $photographers = $client->getItems('photographers');
 
     <!-- Header mobile -->
     <div id="header-mobile">
-      <!-- TODO Header mobile -->
-      <p>Header mobile</p>
+      <div class="menu-icon">
+        <span class="hamb-menu"></span>
+      </div>
+
+      <div class="logo">
+        <a href="#accueil">Studio Mozart</a>
+      </div>
+
+      <div class="header-mobile-menu">
+        <div class="container">
+          <a href="#lieu">Le Lieu</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#faq">FAQ</a>
+          <a href="#photographes">Photographes</a>
+
+          <div class="contact">
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="socials">
+          <!-- TODO Social links -->
+          <div class="left">
+            <a href="facebook">Facebook</a>
+          </div><!--
+          --><div class="right">
+            <a href="instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="fullpage">
@@ -302,9 +330,12 @@ $photographers = $client->getItems('photographers');
     </div>
 
     <script src="/scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/slick.min.js" type="text/javascript" charset="utf-8"></script>
+
     <script src="/scripts/main.js" type="text/javascript" charset="utf-8"></script>
+
   </body>
 </html>
