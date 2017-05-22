@@ -7,6 +7,18 @@ $(document).ready(function() {
   if (window.innerWidth < 768) {
     $('html').addClass('mobile');
     isMobile = true;
+
+    $('#pricing').addClass('pricing0');
+    $('#pricing').data('anchor', 'tarif0');
+
+    $('#pricing .grid-4').each(function(index, value) {
+      if (index != 0) {
+        var newValue = index - 1;
+        $('.pricing'+ newValue).after('<div data-anchor="tarif'+index+'" class="section pricing-multiple pricing' + index + '"><div class="grid-4">' + $(value).html() + '</div></div>');
+      }
+    });
+
+    $('#pricing .grid-4:not(:first-child)').remove();
   }
 
   // Main Fullpage.js initialization

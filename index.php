@@ -196,7 +196,7 @@ $photographers = $client->getItems('photographers');
         <!--
         <?php foreach($prices as $price): ?>
           --><div class="grid-4">
-            <span class="price"><?php echo $price->price ?> € <sup>ht</sup></span><br>
+            <span class="price"><?php echo $price->price ?> € <sup>ttc</sup></span><br>
             <span class="delay"><?php echo $price->timing ?></span>
             <p class="informations">
               <span>Durée de la location</span><br>
@@ -223,6 +223,11 @@ $photographers = $client->getItems('photographers');
 
             <!-- TODO Reservation -->
             <a href="#">Réserver le studio</a>
+
+            <div class="next-slide" onclick="$.fn.fullpage.moveSectionDown();">
+              <p>offre suivante</p>
+              <img src="/img/arrow-down.png" alt="v">
+            </div>
           </div><!--
         <?php endforeach; ?>
         -->

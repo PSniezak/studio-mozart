@@ -230,31 +230,31 @@ ul, li {
     background-size: cover; }
 
 /* PRICING */
-#pricing.section {
+#pricing.section, .pricing-multiple.section {
   padding: 0 46px;
   display: table;
   width: 100%; }
-  #pricing.section .grid-4 {
+  #pricing.section .grid-4, .pricing-multiple.section .grid-4 {
     display: table-cell;
     width: 25%;
     vertical-align: middle; }
-    #pricing.section .grid-4 .price {
+    #pricing.section .grid-4 .price, .pricing-multiple.section .grid-4 .price {
       font-family: 'adelon-bold';
       font-size: 48px; }
-    #pricing.section .grid-4 .delay {
+    #pricing.section .grid-4 .delay, .pricing-multiple.section .grid-4 .delay {
       font-family: 'din-medium';
       font-size: 14px; }
-    #pricing.section .grid-4 p {
+    #pricing.section .grid-4 p, .pricing-multiple.section .grid-4 p {
       max-width: 95%;
       color: black;
       font-size: 11px;
       line-height: 13px; }
-      #pricing.section .grid-4 p span {
+      #pricing.section .grid-4 p span, .pricing-multiple.section .grid-4 p span {
         color: #9b9b9b;
         font-family: 'din-light'; }
-        #pricing.section .grid-4 p span.supp {
+        #pricing.section .grid-4 p span.supp, .pricing-multiple.section .grid-4 p span.supp {
           font-size: 9px; }
-    #pricing.section .grid-4 a {
+    #pricing.section .grid-4 a, .pricing-multiple.section .grid-4 a {
       margin-top: 78px;
       width: 205px;
       display: block;
@@ -264,6 +264,11 @@ ul, li {
       font-size: 10px;
       text-transform: uppercase;
       padding: 5px 0 3px 0; }
+    #pricing.section .grid-4 .next-slide, .pricing-multiple.section .grid-4 .next-slide {
+      display: none; }
+
+.pricing-mulitple {
+  display: none; }
 
 /* QUESTIONS */
 #questions.section {
@@ -444,4 +449,26 @@ ul, li {
       #location.section .container .left .proximity .opening {
         text-align: right; }
     #location.section .container .right {
-      height: 100vh; } }
+      height: 100vh; }
+  /* PRICING */
+  #pricing.section, .pricing-multiple.section {
+    padding: 0 36px; }
+    #pricing.section .grid-4, .pricing-multiple.section .grid-4 {
+      text-align: center; }
+      #pricing.section .grid-4 .informations, .pricing-multiple.section .grid-4 .informations {
+        margin-right: 0;
+        max-width: 100%; }
+      #pricing.section .grid-4 a, .pricing-multiple.section .grid-4 a {
+        margin: 36px auto 0 auto; }
+      #pricing.section .grid-4 .next-slide, .pricing-multiple.section .grid-4 .next-slide {
+        margin-top: 36px;
+        display: block;
+        text-align: center; }
+        #pricing.section .grid-4 .next-slide p, .pricing-multiple.section .grid-4 .next-slide p {
+          max-width: 100%;
+          margin: 0;
+          font: 11px 'adelon-bold';
+          margin-bottom: 2px; }
+        #pricing.section .grid-4 .next-slide img, .pricing-multiple.section .grid-4 .next-slide img {
+          width: 16px;
+          height: auto; } }
