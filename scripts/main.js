@@ -67,6 +67,12 @@ $(document).ready(function() {
     $('#header-mobile .menu-icon .hamb-menu').removeClass('is-clicked');
     $('.header-mobile-menu').hide("slide", { direction: "down" }, 500);
   });
+  $('#header-mobile, #header-desktop').on('click', function() {
+    if ($("#slideshows .slideshow").hasClass('slick-initialized')) {
+      $('.slideshow.active').removeClass('active').fadeOut();
+      $("#slideshows .close-button").fadeOut();
+    }
+  })
 
   // Location
   if (isMobile) {
@@ -145,13 +151,25 @@ $(document).ready(function() {
     var photographerId = $(this).data('id');
 
     if (!$("#slideshows .slideshow[data-id='" + photographerId+"']").hasClass('slick-initialized')) {
-      $("#slideshows .slideshow[data-id='" + photographerId+"']").slick({
-        infinite: false,
-        arrows: false,
-        variableWidth: true,
-        adaptiveHeight: true,
-        lazyLoad: 'progressive'
-      });
+      if (isMobile) {
+        $("#slideshows .slideshow[data-id='" + photographerId+"']").slick({
+          infinite: false,
+          arrows: false,
+          adaptiveHeight: true,
+          lazyLoad: 'progressive',
+          vertical: true,
+          verticalSwiping: true,
+          zIndex: 25
+        });
+      } else {
+        $("#slideshows .slideshow[data-id='" + photographerId+"']").slick({
+          infinite: false,
+          arrows: false,
+          variableWidth: true,
+          adaptiveHeight: true,
+          lazyLoad: 'progressive'
+        });
+      }
     }
 
     $("#slideshows .slideshow[data-id='" + photographerId+"']").addClass('active').fadeIn();
