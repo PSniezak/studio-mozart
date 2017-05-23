@@ -418,7 +418,7 @@ ul, li {
       max-height: calc(100vh - 112px); }
 
 /* REPSONSIVE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   /* HEADER DESKTOP */
   #header-desktop {
     display: none; }
