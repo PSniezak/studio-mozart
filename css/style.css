@@ -205,7 +205,7 @@ ul, li {
     padding: 54px 46px;
     position: relative; }
     #location.section .container .left .presentation {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 20px;
       text-align: justify; }
     #location.section .container .left a {
@@ -245,16 +245,28 @@ ul, li {
     #pricing.section .grid-4 .delay, .pricing-multiple.section .grid-4 .delay {
       font-family: 'din-medium';
       font-size: 14px; }
-    #pricing.section .grid-4 p, .pricing-multiple.section .grid-4 p {
+    #pricing.section .grid-4 .informations, .pricing-multiple.section .grid-4 .informations {
+      margin-top: 11px;
       max-width: 95%;
       color: black;
       font-size: 11px;
-      line-height: 13px; }
-      #pricing.section .grid-4 p span, .pricing-multiple.section .grid-4 p span {
+      line-height: 12px;
+      letter-spacing: 2px;
+      font-family: 'adelon-light'; }
+      #pricing.section .grid-4 .informations span, .pricing-multiple.section .grid-4 .informations span {
         color: #9b9b9b;
         font-family: 'din-light'; }
-        #pricing.section .grid-4 p span.supp, .pricing-multiple.section .grid-4 p span.supp {
+        #pricing.section .grid-4 .informations span.supp, .pricing-multiple.section .grid-4 .informations span.supp {
           font-size: 9px; }
+      #pricing.section .grid-4 .informations div, .pricing-multiple.section .grid-4 .informations div {
+        color: black;
+        font-size: 11px;
+        line-height: 12px;
+        font-family: 'adelon-light'; }
+        #pricing.section .grid-4 .informations div b, .pricing-multiple.section .grid-4 .informations div b {
+          font-weight: normal;
+          color: #9b9b9b;
+          font-family: 'din-light'; }
     #pricing.section .grid-4 a, .pricing-multiple.section .grid-4 a {
       margin-top: 78px;
       width: 205px;
@@ -440,6 +452,7 @@ ul, li {
     #location.section .container .left .presentation p {
       margin: 0; }
     #location.section .container .left .presentation a {
+      text-align: center;
       display: block;
       margin-top: 32px;
       margin-bottom: 32px; }
@@ -482,6 +495,8 @@ ul, li {
         #pricing.section .grid-4 .next-slide img, .pricing-multiple.section .grid-4 .next-slide img {
           width: 16px;
           height: auto; }
+  .pricing-multiple.section.pricing3 .grid-4 .next-slide {
+    display: none; }
   /* QUESTIONS */
   #questions.section {
     padding: 0 36px;
@@ -593,6 +608,8 @@ ul, li {
       #infos.section .container .left {
         margin-top: 0;
         margin-bottom: 0; }
+      #infos.section .container .right {
+        margin-top: 22px; }
   /* SLIDESHOWS */
   #slideshows .slick-list {
     height: 100%;

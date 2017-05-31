@@ -9,6 +9,8 @@ $client = \Directus\SDK\ClientFactory::create('ShUhl3apZ0vZlYQqWHJlg5NNuxb0NeYK'
 
 $prices = $client->getItems('prices');
 $photographers = $client->getItems('photographers');
+$home = $client->getItem('others', 1);
+$location = $client->getItem('others', 2);
 
 ?>
 
@@ -45,9 +47,8 @@ $photographers = $client->getItems('photographers');
       </div><!--
 
       --><div class="grid-4 social">
-        <!-- TODO Social links -->
-        <a href="facebook">facebook</a>
-        <a href="instagram">instagram</a>
+        <a href="https://www.facebook.com/studiomozartparis/" target="_blank">facebook</a>
+        <a href="https://www.instagram.com/studiomozartparis/" target="_blank">instagram</a>
       </div>
     </div>
 
@@ -73,12 +74,11 @@ $photographers = $client->getItems('photographers');
         </div>
 
         <div class="socials">
-          <!-- TODO Social links -->
           <div class="left">
-            <a href="facebook">Facebook</a>
+            <a href="https://www.facebook.com/studiomozartparis/" target=_blank>Facebook</a>
           </div><!--
           --><div class="right">
-            <a href="instagram">Instagram</a>
+            <a href="https://www.instagram.com/studiomozartparis/" target="_blank">Instagram</a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ $photographers = $client->getItems('photographers');
     <div id="fullpage">
       <!-- Home -->
       <div data-anchor="accueil" id="home" class="section">
-        <div class="main-background" style="background-image: url('/img/temp/HOME.jpg')"></div>
+        <div class="main-background" style="background-image: url('<?php echo $directus_url . $home->image->url ?>')"></div>
         <div class="arrow" onclick="$.fn.fullpage.moveSectionDown();">
           <img src="/img/arrow-down.png" alt="v">
         </div>
@@ -104,8 +104,7 @@ $photographers = $client->getItems('photographers');
                 Le Studio Mozart dispose également d’une cuisine toute équipée ainsi qu’une douche prête à l’emploi.
               </p>
               <br>
-              <!-- TODO PDF link -->
-              <a href="#">Télécharger le plan du Studio Mozart</a>
+              <a href="/img/STUDIO_MOZART_PLAN.pdf" target="_blank">Télécharger le plan du Studio Mozart</a>
             </div>
 
             <div class="proximity">
@@ -187,7 +186,7 @@ $photographers = $client->getItems('photographers');
               </ul>
             </div>
           </div><!--
-          --><div class="right" style="background-image: url('/img/location.jpg')"></div>
+          --><div class="right" style="background-image: url('<?php echo $directus_url . $location->image->url; ?>')"></div>
         </div>
       </div>
 
@@ -198,28 +197,13 @@ $photographers = $client->getItems('photographers');
           --><div class="grid-4">
             <span class="price"><?php echo $price->price ?> € <sup>ttc</sup></span><br>
             <span class="delay"><?php echo $price->timing ?></span>
-            <p class="informations">
+            <div class="informations">
               <span>Durée de la location</span><br>
               <?php echo $price->schedule ?><br>
               Heure supplémentaire <span class="supp">+50,00 € <sup>TTC</sup></span><br>
               <br>
-              <span>Matériel compris</span><br>
-              2ﬁElinchrom® BRX 500<br>
-              2ﬁPortalite 66cm<br>
-              Elinchrom® Tripod Set 52-190cm<br>
-              Fond Colorama® L.2,72ﬁl.11m CL265 “Artic White”<br>
-              Elinchrom® Tripod Set 52-190cm<br>
-              Multiprises, ralonges, matériel divers, pinces, gaffer, ...<br>
-              <br>
-              <span>Accomodations</span><br>
-              Wi-fi en fibre optique gratuit<br>
-              Enceintes Bose® companion 5<br>
-              Chargeurs Iphone® 4 à 7s, chargeurs universels<br>
-              Disque dur Western Digital® for Mac 2To à disposition<br>
-              Machine Nespresso® + capsules Nespresso® gratuites<br>
-              Frigidaire 115 litres à disposition (minibar en supplément)<br>
-              Plaques chauffantes, micro-ondes, matériel de cuisine
-            </p>
+              <?php echo $price->description ?>
+            </div>
 
             <!-- TODO Reservation -->
             <a href="#">Réserver le studio</a>
@@ -265,10 +249,12 @@ $photographers = $client->getItems('photographers');
         <div class="container">
           <!--
           <?php foreach($photographers as $photographer): ?>
+          <?php for ($i=0; $i < 12; $i++): ?>
           --><div class="grid-4 item" data-id="<?php echo $photographer->id ?>">
               <div class="main-picture" style="background-image: url('<?php echo $directus_url . $photographer->cover->url; ?>')"></div>
               <div class="name"><p>Calypso Mahieu</p></div>
             </div><!--
+          <?php endfor; ?>
           <?php endforeach; ?>
           -->
         </div>
@@ -340,6 +326,7 @@ $photographers = $client->getItems('photographers');
     <script src="/scripts/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
 
     <script src="/scripts/main.js" type="text/javascript" charset="utf-8"></script>
 

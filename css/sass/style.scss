@@ -237,7 +237,7 @@ ul, li {
       position: relative;
 
       .presentation {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 20px;
         text-align: justify;
       }
@@ -296,11 +296,14 @@ ul, li {
       font-size: 14px;
     }
 
-    p {
+    .informations {
+      margin-top: 11px;
       max-width: 95%;
       color: black;
       font-size: 11px;
-      line-height: 13px;
+      line-height: 12px;
+      letter-spacing: 2px;
+      font-family: 'adelon-light';
 
       span {
         color: #9b9b9b;
@@ -308,6 +311,18 @@ ul, li {
 
         &.supp {
           font-size: 9px;
+        }
+      }
+      div {
+        color: black;
+        font-size: 11px;
+        line-height: 12px;
+        font-family: 'adelon-light';
+
+        b {
+          font-weight: normal;
+          color: #9b9b9b;
+          font-family: 'din-light';
         }
       }
     }
@@ -569,6 +584,7 @@ ul, li {
           }
 
           a {
+            text-align: center;
             display: block;
             margin-top: 32px;
             margin-bottom: 32px;
@@ -631,6 +647,13 @@ ul, li {
         img {
           width: 16px; height: auto;
         }
+      }
+    }
+  }
+  .pricing-multiple.section.pricing3 {
+    .grid-4 {
+      .next-slide {
+        display: none;
       }
     }
   }
@@ -790,6 +813,9 @@ ul, li {
       .left {
         margin-top: 0;
         margin-bottom: 0;
+      }
+      .right {
+        margin-top: 22px;
       }
     }
   }
