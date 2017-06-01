@@ -193,4 +193,20 @@ $(document).ready(function() {
     $("#slideshows .close-button").fadeOut();
   });
 
+  // Modal
+  // Opened
+  $(document).on('opened', '.remodal', function () {
+    $.fn.fullpage.setAllowScrolling(false);
+    $.fn.fullpage.setKeyboardScrolling(false);
+  });
+  // CLosing
+  $(document).on('closing', '.remodal', function (e) {
+    $.fn.fullpage.setAllowScrolling(true);
+    $.fn.fullpage.setKeyboardScrolling(true);
+  });
+  // Form
+  $('.submit').on('click', function() {
+    console.log("salut");
+  });
+
 });

@@ -19,7 +19,7 @@
   src: url("/fonts/ufonts.com_din-light-webfont.woff2") format("woff2"), url("/fonts/ufonts.com_din-light-webfont.woff") format("woff"); }
 
 /* GLOBAL */
-a, p, span, h1, h2, h3 {
+a, p, span, h1, h2, h3, input {
   font-family: 'adelon-light';
   letter-spacing: 2px; }
 
@@ -268,6 +268,7 @@ ul, li {
           color: #9b9b9b;
           font-family: 'din-light'; }
     #pricing.section .grid-4 a, .pricing-multiple.section .grid-4 a {
+      cursor: pointer;
       margin-top: 78px;
       width: 205px;
       display: block;
@@ -428,6 +429,31 @@ ul, li {
       padding-right: 900px; }
     #slideshows .slideshow .container img {
       max-height: calc(100vh - 112px); }
+
+/* MODAL */
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.4); }
+
+.remodal-wrapper .remodal h1 {
+  font-size: 28px;
+  margin-bottom: 32px; }
+
+.remodal-wrapper .remodal form {
+  display: block;
+  margin: 12px 0; }
+  .remodal-wrapper .remodal form input {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    outline: none;
+    border: none; }
+    .remodal-wrapper .remodal form input:not(:last-child) {
+      margin-bottom: 32px; }
+    .remodal-wrapper .remodal form input:last-child {
+      cursor: pointer;
+      width: 160px;
+      border: 1px solid black;
+      background-color: transparent; }
 
 /* REPSONSIVE */
 @media screen and (max-width: 860px) {
