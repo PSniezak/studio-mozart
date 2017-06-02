@@ -550,8 +550,9 @@ ul, li {
 }
 .remodal-wrapper {
   .remodal {
-    h1 {
+    .title {
       font-size: 28px;
+      margin-top: 0;
       margin-bottom: 32px;
     }
     form {
@@ -573,6 +574,20 @@ ul, li {
           width: 160px;
           border: 1px solid black;
           background-color: transparent;
+        }
+      }
+    }
+    &.remodal-confirmation {
+      .title {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .error {
+        font-size: 16px;
+        margin-bottom: 0;
+
+        a {
+          text-decoration: underline;
         }
       }
     }

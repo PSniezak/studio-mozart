@@ -209,7 +209,7 @@ $location = $client->getItem('others', 2);
               </div>
 
               <!-- TODO Reservation -->
-              <a data-remodal-target="modal">Réserver le studio</a>
+              <a data-remodal-target="booking" class="booking-trigger">Réserver le studio</a>
 
               <div class="next-slide" onclick="$.fn.fullpage.moveSectionDown();">
                 <p>offre suivante</p>
@@ -325,16 +325,28 @@ $location = $client->getItem('others', 2);
       </div>
     </div>
 
-    <div class="remodal" data-remodal-id="modal">
+    <div class="remodal remodal-form" data-remodal-id="booking">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h1>Demande de réservation</h1>
+      <p class="title">Demande de réservation</p>
 
-      <form action="/mailer.php" method="post">
+      <form id="booker" method="post">
         <input required type="text" name="name" placeholder="Nom *">
         <input required type="email" name="email" placeholder="Email *">
-        <input required type="tel" name="number" placeholder="Numéro de téléphone *">
+        <input required type="tel" name="tel" placeholder="Numéro de téléphone *">
+        <input type="hidden" name="price" value="" class="price-container">
         <input required type="submit" name="submit" value="Envoyer" class="submit">
       </form>
+    </div>
+
+    <div class="remodal remodal-confirmation" data-remodal-id="confirmation">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <p class="title">Votre demande a bien été envoyée.</p>
+    </div>
+
+    <div class="remodal remodal-confirmation" data-remodal-id="erreur">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <p class="title">Une erreur est survenue lors de l'envoie.</p>
+      <p class="error">Contacter nous directement <a href="mailto:booking@studiomozartparis.com">booking@studiomozartparis.com</a></p>
     </div>
 
     <script src="/scripts/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>

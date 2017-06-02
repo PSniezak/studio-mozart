@@ -194,8 +194,13 @@ $(document).ready(function() {
   });
 
   // Modal
+  // Price generation
+  $('.booking-trigger').on('click', function() {
+    var value = $(this).siblings('.price').html();
+    $('.remodal-form .price-container').val(value);
+  });
   // Opened
-  $(document).on('opened', '.remodal', function () {
+  $(document).on('opened', '.remodal-form', function () {
     $.fn.fullpage.setAllowScrolling(false);
     $.fn.fullpage.setKeyboardScrolling(false);
   });
@@ -203,10 +208,28 @@ $(document).ready(function() {
   $(document).on('closing', '.remodal', function (e) {
     $.fn.fullpage.setAllowScrolling(true);
     $.fn.fullpage.setKeyboardScrolling(true);
+
+    // Hash regeneration
+    var hash = $('body').attr('class');
+    window.location.hash = hash.replace("fp-viewing-", "");
   });
   // Form
-  $('.submit').on('click', function() {
-    console.log("salut");
+  $('#booker').on('submit', function(e) {
+    e.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: "/mailer.php",
+      data: $("#booker").serialize(),
+      success: function() {
+        var inst = $('[data-remodal-id=confirmation]').remodal();
+        inst.open();
+      },
+      error: function() {
+        var inst = $('[data-remodal-id=erreur]').remodal();
+        inst.open();
+      }
+    });
   });
 
 });
