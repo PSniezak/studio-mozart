@@ -39,6 +39,17 @@ $(document).ready(function() {
     normalScrollElementTouchThreshold: 15,
 
 		onLeave: function(index, nextIndex, direction) {
+      if (isMobile && (nextIndex == 2 || nextIndex == 8 || nextIndex == 9)) {
+        $('.normal-scroll, #location, #questions, #displays').scrollTop(1);
+      }
+      // if ($('.fp-scroller, .iScrollIndicator')) {
+      //   $('.fp-scroller, .iScrollIndicator').css('transform', 'translate(0px, 0px)');
+      //
+      //   if ($('.fp-section').find('.fp-scrollable').data('iscrollInstance')) {
+      //     $('.fp-section').find('.fp-scrollable').data('iscrollInstance').y = 0;
+      //   }
+      // }
+
       // if (nextIndex == 5) {
       //   setTimeout(function() {
       //     $('#questions .columns .container').scrollTop(5);
@@ -77,9 +88,9 @@ $(document).ready(function() {
 
   // Location
   if (isMobile) {
-    $('#location .container').addClass('normal-scroll');
+    $('#location .helper').addClass('normal-scroll');
 
-    $('#location .container').scroll(function() {
+    $('#location').scroll(function() {
       var st = $(this).scrollTop();
       if (st > lastScrollTop){
         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
@@ -93,10 +104,20 @@ $(document).ready(function() {
       lastScrollTop = st;
     });
   }
+  $('#stud .studio-slider').slick({
+    infinite: true,
+    arrows: true,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slick-arrow slick-prev"><img src="/img/arrow-left.png" alt="Previous slide"></button>',
+    nextArrow: '<button type="button" class="slick-arrow slick-next"><img src="/img/arrow-right.png" alt="Next slide"></button>',
+    lazyLoad: 'progressive'
+  });
 
   // FAQ
   if (isMobile) {
     $('#questions .helper .columns .container').removeClass('normal-scroll');
+    $('#questions .helper .columns-fixed .container').removeClass('normal-scroll');
     $('#questions .helper').addClass('normal-scroll');
 
     $('#questions').scroll(function() {

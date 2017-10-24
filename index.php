@@ -9,8 +9,8 @@ $client = \Directus\SDK\ClientFactory::create('ShUhl3apZ0vZlYQqWHJlg5NNuxb0NeYK'
 
 $prices = $client->getItems('prices');
 $photographers = $client->getItems('photographers');
+$studios = $client->getItems('studio');
 $home = $client->getItem('others', 1);
-$location = $client->getItem('others', 2);
 
 ?>
 
@@ -98,98 +98,132 @@ $location = $client->getItem('others', 2);
 
         <!-- Location -->
         <div data-anchor="lieu" id="location" class="section">
+          <div class="helper">
+            <div class="container">
+              <div class="left">
+                <div class="presentation">
+                  <p>
+                    Le Studio Mozart se situe dans le quartier d’Auteuil, dans un environnement calme, dans le XVIème arrondissement de Paris. Situé au 6ème étage, avec ascenceur et sans vis-à-vis d’un immeuble classé datant des années 30, le studio Mozart jouit d’un balcon orienté plein sud.<br/><br/>
+                    Le Studio Mozart a conservé les éléments de l’ancien : parquet, moulures. Très ensoleillé, il dispose d’une belle hauteur sous plafond (3m30) et d’une excellente luminosité. Refait à neuf dans un esprit contemporain. Il dispose de 15 prises situées au extrémités de la pièce principale, permettant ainsi un grand nombre de branchements.<br/><br/>
+                    Le Studio Mozart dispose également d’une cuisine toute équipée ainsi qu’une douche prête à l’emploi.
+                  </p>
+                </div>
+
+                <div class="list proximity">
+                  <p>Autour du Studio Mozart</p>
+
+                  <ul>
+                    <li>
+                      <div class="name">
+                        <span>Monoprix</span>
+                      </div>
+                      <div class="opening">
+                        <span>09:00 à 22:00</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Le Polo Burger</span>
+                      </div>
+                      <div class="opening">
+                        <span>10:00 à 20:30</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Domino’s Pizza</span>
+                      </div>
+                      <div class="opening">
+                        <span>11:30 à 22:30</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Pizza Hut</span>
+                      </div>
+                      <div class="opening">
+                        <span>11:30 à 23:00</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Pressing</span>
+                      </div>
+                      <div class="opening">
+                        <span>10:00 à 20:30</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Pharmacie</span>
+                      </div>
+                      <div class="opening">
+                        <span>08:00 à 20:30</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Poste</span>
+                      </div>
+                      <div class="opening">
+                        <span>09:00 à 19:00</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Station Service</span>
+                      </div>
+                      <div class="opening">
+                        <span>08:30 à 22:00</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list downloads">
+                  <p>Téléchargements</p>
+
+                  <ul>
+                    <li>
+                      <div class="name">
+                        <span><a href="/img/STUDIO_MOZART_PLAN.pdf" target="_blank">Plan du Studio Mozart</a></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Tarifs du Studio Mozart</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Photos du Studio Mozart</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Règlement du Studio Mozart</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="name">
+                        <span>Matériel disponible au Studio Mozart</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-anchor="studio" id="stud" class="section">
           <div class="container">
-            <div class="left">
-              <div class="presentation">
-                <p>
-                  Le Studio Mozart se situe dans le quartier d’Auteuil, dans un environnement calme, dans le XVIème arrondissement de Paris. Situé au 6ème étage, avec ascenceur et sans vis-à-vis d’un immeuble classé datant des années 30, le studio Mozart jouit d’un balcon orienté plein sud.<br/><br/>
-                  Le Studio Mozart a conservé les éléments de l’ancien : parquet, moulures. Très ensoleillé, il dispose d’une belle hauteur sous plafond (3m30) et d’une excellente luminosité. Refait à neuf dans un esprit contemporain. Il dispose de 15 prises situées au extrémités de la pièce principale, permettant ainsi un grand nombre de branchements.<br/><br/>
-                  Le Studio Mozart dispose également d’une cuisine toute équipée ainsi qu’une douche prête à l’emploi.
-                </p>
-                <br>
-                <a href="/img/STUDIO_MOZART_PLAN.pdf" target="_blank">Télécharger le plan du Studio Mozart</a>
-              </div>
-
-              <div class="proximity">
-                <p>Dans un rayon de 100m</p>
-
-                <ul>
-                  <li>
-                    <div class="name">
-                      <span>Monoprix</span>
-                    </div>
-                    <div class="opening">
-                      <span>09:00 à 22:00</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Le Polo Burger</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Domino’s Pizza</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Magasin photo</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Pressing</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Pharmacie</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Poste</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Quinquallerie</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="name">
-                      <span>Bnp</span>
-                    </div>
-                    <div class="opening">
-                      <span>10:00 à 20:30</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div><!--
-            --><div class="right" style="background-image: url('<?php echo $directus_url . $location->image->url; ?>')"></div>
+            <div class="studio-slider">
+              <?php foreach($studios as $studio): ?>
+                <div class="slideshow" data-id="<?php echo $studio->id; ?>">
+                  <div class="main-picture" style="background-image: url('<?php echo $directus_url . $studio->Media->url; ?>')"></div>
+                </div>
+              <?php endforeach; ?>
+            </div>
           </div>
         </div>
 
@@ -230,19 +264,73 @@ $location = $client->getItem('others', 2);
                 TOUTE L’ÉQUIPE SE FERA UN PLAISIR DE VOUS AIDER.
               </p>
             </div><!--
-            <?php for ($i=0; $i < 3; $i++): ?>
+          --><div class="grid-4 columns-fixed">
+              <h2>MATÉRIEL</h2>
+              <div class="container normal-scroll">
+                <p>
+                  <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
+                  Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse material@studiomozartparis.com. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
+                </p>
+              </div>
+            </div><!--
             --><div class="grid-4 columns">
-                <h2>Le studio</h2>
+                <h2>LA RÉSERVATION</h2>
                 <div class="container normal-scroll">
-                  <?php for ($j=0; $j < 8; $j++): ?>
-                    <p>
-                      <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
-                      Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse material@studiomozartparis.com. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
-                    </p>
-                  <?php endfor ?>
+                  <p>
+                    <span>Comment puis-je réserver une date pour ma prise de vue ?</span><br>
+                    Une fois la formule choisie, vous pourrez remplir l’horaire souhaité, un membre du Studio Mozart prendra contact avec vous par téléphone afin de procéder au paiement d’un accompte de 50% de la somme. Une fois le paiement effectué et validé, vous recevrez une facture avec le règlement intérieur qu’il faudra rendre signé le jour de votre réservation, le plan du studio, ainsi qu’une confirmation de réservation.
+                  </p>
+                  <p>
+                    <span>Je n’arrive pas à reserver sur votre site, existe-t-il un autre moyen ?</span><br>
+                    Oui, il vous suffit de nous envoyer un mail à l’adresse booking@studiomozartparis.com avec votre nom, prénom, la date souhaitée, les horaires souhaités, un numéro de téléphone ainsi qu’une tranche horaire sur laquelle vous êtes joignable.
+                  </p>
+                  <p>
+                    <span>Comment se déroule la location pour le Week-end Complet ?</span><br>
+                    La location du studio le week-end comprend deux jours, Samedi de 9:00 à 21:00 et Dimanche de 9:00 à 21:00. Entre ces deux jours, vous devrez remettre la clé du studio à un membre du Studio Mozart. Elle vous sera rendue le lendemain matin.
+                  </p>
+                  <p>
+                    <span>Que se passe-t-il si j’arrive en retard au Studio Mozart pour ma réservation ?</span><br>
+                    Si vous arrivez en retard, votre retard sera décompté de votre réservation. Les horaires sont strictes, tout dépassement de tranche horaire entrainera un surcout de 50€/h.
+                  </p>
+                  <p>
+                    <span>Si j’ai fini avant l’heure prévue, est-ce que je paye la totalité de ma réservation ?</span><br>
+                    Oui, toute réservation est due dans son intégralité. Aucun remboursement ne sera effectué. Si vous pensez que votre réservation est trop longue, vous pouvez réserver une demi-journée ou réserver le Studio Mozart à l’heure.
+                  </p>
+                  <p>
+                    <span>Comment se déroule le règlement ?</span><br>
+                    Le règlement s’effectue en début de séance. Si toutefois il y aurait un problème lié au matériel ou un dépassement de l’horaire de réservation, le Studio Mozart factureras en supplément.
+                  </p>
+                  <p>
+                    <span>Quels sont les moyens de paiements que vous acceptez ?</span><br>
+                    Nous acceptons les virements bancaires, les espèces ainsi que les chèques de banque. Malheureusement nous ne sommes pas encore équipés de terminal à carte bancaire. Nous n’acceptons pas les chèques, billets de 500 et 200 euros.
+                  </p>
                 </div>
               </div><!--
-            <?php endfor ?>
+              --><div class="grid-4 columns-fixed">
+                  <h2>DIVERS</h2>
+                  <div class="container normal-scroll">
+                    <p>
+                      <span>Est-ce que les lumières et le fond seront mis en place pour ma réservation ?</span><br>
+                      Oui, nous montons systématiquement les deux boites à lumière ainsi que le fond photo. Nous souhaitons optimiser le temps de réservation de chaque client.
+                    </p>
+                    <p>
+                      <span>Quelles sont les tailles des planches que vous proposez ?</span><br>
+                      Oui, nous montons systématiquement les deux boites à lumière ainsi que le fond photo. Libre à vous de les plier suivant vos envies.
+                    </p>
+                    <p>
+                      <span>Si ma prise de vue dépasse, est-ce que je dois payer un supplément ?</span><br>
+                      Oui, toute heure commencée en supplément de votre location est due dans son intégralité. Une heure supplémentaire est facturée 50 euros TTC.
+                    </p>
+                    <p>
+                      <span>Avez-vous des assurances couvrant les objets de valeurs ?</span><br>
+                      Oui, toute réservation est dûe dans son intégralité. Aucun remboursement ne sera effectué. Si vous pensez que votre réservation est trop longue, vous pouvez réserver une demi-journée ou réserver le Studio Mozart à l’heure.
+                    </p>
+                    <p>
+                      <span>Est-ce que vous proposez un service de post production et/ou de retouche ?</span><br>
+                      Oui, le Studio Mozart possède un large réseau de retoucheurs, pour toute demande, veuillez nous envoyer un mail à contact@atroistudio.com.
+                    </p>
+                  </div>
+                </div><!--
             -->
           </div>
         </div>
@@ -252,12 +340,10 @@ $location = $client->getItem('others', 2);
           <div class="container">
             <!--
             <?php foreach($photographers as $photographer): ?>
-            <?php for ($i=0; $i < 12; $i++): ?>
             --><div class="grid-4 item" data-id="<?php echo $photographer->id ?>">
                 <div class="main-picture" style="background-image: url('<?php echo $directus_url . $photographer->cover->url; ?>')"></div>
-                <div class="name"><p>Calypso Mahieu</p></div>
+                <div class="name"><p><?php echo $photographer->name ?></p></div>
               </div><!--
-            <?php endfor; ?>
             <?php endforeach; ?>
             -->
           </div>
@@ -271,9 +357,9 @@ $location = $client->getItem('others', 2);
               <div class="center">
                 <span class="title">Réservations</span>
                 <p>
+                  contact@studiomozartparis.com<br>
                   booking@studiomozartparis.com<br>
                   request@studiomozartparis.com<br>
-                  billing@studiomozartparis.com<br>
                 </p>
                 <br>
                 <span class="title">Adresse</span>

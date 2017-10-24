@@ -1,6 +1,3 @@
-// TODO Fonts
-
-
 /* GLOBAL */
 a, p, span, h1, h2, h3, input {
   font-family: 'adelon-light';
@@ -222,56 +219,127 @@ ul, li {
 
 /* LOCATION */
 #location.section {
-  .container {
+  .helper {
     width: 100%; height: 100%;
+    display: table;
+    .container {
+      display: table-cell;
+      vertical-align: middle;
 
-    .left, .right {
-      width: 50%;
-      height: 100%;
-      display: inline-block;
-      vertical-align: top;
-    }
-    .left {
-      box-sizing: border-box;
-      padding: 54px 46px;
-      position: relative;
+      .left {
+        width: 50%;
+        margin: 0 calc(25% + 25px);
 
-      .presentation {
-        font-size: 16px;
-        line-height: 20px;
-        text-align: justify;
-      }
-      a {
-        font-size: 14px;
-        font-family: 'adelon-bold';
-      }
-      .proximity {
-        position: absolute;
-        bottom: 54px;
-        width: 300px;
-
-        p {
+        .presentation {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+          margin-bottom: 32px;
+        }
+        a {
           font-size: 14px;
           font-family: 'adelon-bold';
         }
-        .name, .opening {
-          width: 50%;
+        .list {
+          display: inline-block;
+          bottom: 54px;
+          width: 38%;
+          margin-right: 9%;
 
-          span {
-            font-size: 11px;
+          p {
+            font-size: 14px;
+            margin-bottom: 12px;
+            font-family: 'adelon-bold';
+          }
+          .name, .opening {
+            width: 50%;
+
+            span, a {
+              font-family: 'adelon-light';
+              font-size: 11px;
+            }
+            a:hover {
+              font-weight: bold;
+            }
+          }
+          .name {
+            width: 116px;
+            float: left;
+          }
+          .opening {
+            float: right;
+          }
+
+          &.downloads {
+            width: 49%;
+            margin-right: 0;
+
+            .name {
+              width: 100%;
+            }
           }
         }
-        .name {
-          float: left;
-        }
-        .opening {
-          float: right;
-        }
+      }
+      .right {
+        background-position: center;
+        background-size: cover;
       }
     }
-    .right {
-      background-position: center;
-      background-size: cover;
+  }
+}
+
+#stud.section {
+  width: 100%;
+  height: 100%;
+
+  .container {
+    width: 100%;
+    height: 100%;
+
+    .studio-slider {
+      width: 100%;
+      height: 100%;
+
+      .slick-arrow {
+        background: none;
+        outline: none;
+        border: none;
+        position: absolute;
+        z-index: 99;
+        top: calc(50% - 21px);
+
+        img {
+          height: 42px;
+        }
+
+        &.slick-prev {
+          left: 38px;
+        }
+        &.slick-next {
+          right: 38px;
+        }
+      }
+
+      .slick-list {
+        width: 100%;
+        height: 100%;
+
+        .slick-track {
+          width: 100%;
+          height: 100%;
+
+          .slideshow {
+            width: 100%;
+            height: 100%;
+
+            .main-picture {
+              width: 100%;
+              height: 100%;
+              background-size: cover;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -375,6 +443,35 @@ ul, li {
         a {
           text-decoration: underline;
           font-family: 'adelon-bold';
+        }
+      }
+    }
+    .columns-fixed {
+      vertical-align: top;
+      margin-top: 28px;
+
+      h2 {
+        font-family: 'adelon';
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .container {
+        margin-top: 26px;
+        box-sizing: border-box;
+        position: relative;
+        max-height: 100%;
+
+        p {
+          overflow-x: scroll;
+           -webkit-overflow-scrolling: touch;
+          max-width: 95%;
+          font-size: 11px;
+          line-height: 13px;
+
+          span {
+            font-family: 'adelon-bold';
+          }
         }
       }
     }
@@ -619,49 +716,57 @@ ul, li {
 
   /* LOCATION */
   #location.section {
-    .container {
-      overflow-x: hidden;
+    overflow-x: hidden;
+
+    .helper {
+      display: block;
       max-height: 100%;
+      height: 100%;
+      margin-top: 10%;
 
-      .left, .right {
-        width: 100%; height: auto;
+      .container {
         display: block;
-        padding: 36px 36px 0 36px;
-      }
+        vertical-align: inherit;
+        padding: 0 36px;
 
-      .left {
-        .presentation {
-          p {
-            margin: 0;
-          }
-
-          a {
-            text-align: center;
-            display: block;
-            margin-top: 32px;
-            margin-bottom: 32px;
-          }
-        }
-        .proximity {
-          overflow: hidden;
-          position: relative;
-          bottom: auto;
+        .left {
           width: 100%;
+          margin: 0;
           text-align: center;
-          max-width: 198px;
-          margin: auto;
-          margin-bottom: 48px;
 
-          .name {
-            text-align: left;
-          }
-          .opening {
-            text-align: right;
+          .list {
+            display: block;
+            margin: 0 auto;
+            bottom: auto;
+            width: 100%;
+            overflow: hidden;
+
+            &.downloads, &.proximity {
+              width: 100%;
+              margin: 0 auto;
+              margin-bottom: 32px;
+            }
+            &.proximity {
+              ul li {
+                .name {
+                  text-align: left;
+                }
+                .opening {
+                  text-align: right;
+                }
+              }
+            }
+            &.downloads {
+              margin-bottom: 20%;
+
+              ul li {
+                .name {
+                  margin-bottom: 8px;
+                }
+              }
+            }
           }
         }
-      }
-      .right {
-        height: 100vh;
       }
     }
   }
@@ -735,7 +840,7 @@ ul, li {
           }
         }
       }
-      .columns {
+      .columns, .columns-fixed {
         text-align: justify;
         width: 100%; height: auto;
         max-height: none;
