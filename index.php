@@ -22,7 +22,12 @@ $home = $client->getItem('others', 1);
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width"/>
 
-    <!-- TODO Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3c3c3c">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.min.css"/>
     <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
@@ -269,7 +274,7 @@ $home = $client->getItem('others', 1);
               <div class="container normal-scroll">
                 <p>
                   <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
-                  Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse material@studiomozartparis.com. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
+                  Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse <a href="mailto:material@studiomozartparis.com">material@studiomozartparis.com</a>. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
                 </p>
               </div>
             </div><!--
@@ -282,7 +287,7 @@ $home = $client->getItem('others', 1);
                   </p>
                   <p>
                     <span>Je n’arrive pas à reserver sur votre site, existe-t-il un autre moyen ?</span><br>
-                    Oui, il vous suffit de nous envoyer un mail à l’adresse booking@studiomozartparis.com avec votre nom, prénom, la date souhaitée, les horaires souhaités, un numéro de téléphone ainsi qu’une tranche horaire sur laquelle vous êtes joignable.
+                    Oui, il vous suffit de nous envoyer un mail à l’adresse <a href="mailto:booking@studiomozartparis.com">booking@studiomozartparis.com</a> avec votre nom, prénom, la date souhaitée, les horaires souhaités, un numéro de téléphone ainsi qu’une tranche horaire sur laquelle vous êtes joignable.
                   </p>
                   <p>
                     <span>Comment se déroule la location pour le Week-end Complet ?</span><br>
@@ -327,7 +332,7 @@ $home = $client->getItem('others', 1);
                     </p>
                     <p>
                       <span>Est-ce que vous proposez un service de post production et/ou de retouche ?</span><br>
-                      Oui, le Studio Mozart possède un large réseau de retoucheurs, pour toute demande, veuillez nous envoyer un mail à contact@atroistudio.com.
+                      Oui, le Studio Mozart possède un large réseau de retoucheurs, pour toute demande, veuillez nous envoyer un mail à <a href="mailto:contact@atroistudio.com">contact@atroistudio.com</a>.
                     </p>
                   </div>
                 </div><!--
@@ -357,17 +362,19 @@ $home = $client->getItem('others', 1);
               <div class="center">
                 <span class="title">Réservations</span>
                 <p>
-                  contact@studiomozartparis.com<br>
-                  booking@studiomozartparis.com<br>
-                  request@studiomozartparis.com<br>
+                  <a href="mailto:contact@studiomozartparis.com">contact@studiomozartparis.com</a><br>
+                  <a href="mailto:booking@studiomozartparis.com">booking@studiomozartparis.com</a><br>
+                  <a href="mailto:request@studiomozartparis.com">request@studiomozartparis.com</a><br>
                 </p>
                 <br>
                 <span class="title">Adresse</span>
-                <p>
-                  96, Avenue Mozart<br>
-                  75016, Paris<br>
-                  France<br>
-                </p>
+                <a target="_blank" href="https://www.google.fr/maps/search/96+avenue+mozart/@48.8510276,2.2670153,18.37z">
+                  <p>
+                    96, Avenue Mozart<br>
+                    75016, Paris<br>
+                    France<br>
+                  </p>
+                </a>
               </div>
             </div>
             <div class="right">
@@ -419,6 +426,7 @@ $home = $client->getItem('others', 1);
         <input required type="text" name="name" placeholder="Nom *">
         <input required type="email" name="email" placeholder="Email *">
         <input required type="tel" name="tel" placeholder="Numéro de téléphone *">
+        <input required type="date" name="date" placeholder="Date *">
         <input type="hidden" name="price" value="" class="price-container">
         <input required type="submit" name="submit" value="Envoyer" class="submit">
       </form>
