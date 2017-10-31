@@ -138,11 +138,11 @@ $(document).ready(function() {
       var st = $(this).scrollTop();
       if (st > lastScrollTop){
         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-          $.fn.fullpage.moveSectionDown();
+          // $.fn.fullpage.moveSectionDown();
         }
       } else {
         if($(this).scrollTop() == 0) {
-          $.fn.fullpage.moveSectionUp();
+          // $.fn.fullpage.moveSectionUp();
         }
       }
       lastScrollTop = st;
@@ -193,12 +193,14 @@ $(document).ready(function() {
         }).on("mousewheel", function (event) {
           event.preventDefault();
           if (event.deltaX > 0 || event.deltaY < 0) {
-            if (event.deltaFactor * event.deltaY == 1) {
+            if (event.deltaFactor * event.deltaY > 1) {
               $(this).slick("slickNext");
+              event.preventDefault();
             }
           } else if (event.deltaX < 0 || event.deltaY > 0) {
-            if (event.deltaFactor * event.deltaY == 1) {
+            if (event.deltaFactor * event.deltaY > 1) {
               $(this).slick("slickPrev");
+              event.preventDefault();
             }
           }
         });

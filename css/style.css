@@ -257,7 +257,7 @@ ul, li {
         z-index: 99;
         top: calc(50% - 21px); }
         #stud.section .container .studio-slider .slick-arrow img {
-          height: 42px; }
+          height: 34px; }
         #stud.section .container .studio-slider .slick-arrow.slick-prev {
           left: 38px; }
         #stud.section .container .studio-slider .slick-arrow.slick-next {
@@ -488,7 +488,8 @@ ul, li {
   background-color: #fff; }
   #slideshows .slideshow .container {
     box-sizing: border-box;
-    padding-right: 36px; }
+    padding-right: 36px;
+    border: 0; }
     #slideshows .slideshow .container:first-child {
       padding-left: 46px; }
     #slideshows .slideshow .container:last-child {

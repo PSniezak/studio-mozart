@@ -309,7 +309,7 @@ ul, li {
         top: calc(50% - 21px);
 
         img {
-          height: 42px;
+          height: 34px;
         }
 
         &.slick-prev {
@@ -626,6 +626,7 @@ ul, li {
     .container {
       box-sizing: border-box;
       padding-right: 36px;
+      border: 0;
 
       &:first-child {
         padding-left: 46px;
