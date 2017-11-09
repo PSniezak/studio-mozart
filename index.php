@@ -234,7 +234,7 @@ if (isMobile()) {
             <div class="studio-slider">
               <?php foreach($studios as $studio): ?>
                 <div class="slideshow" data-id="<?php echo $studio->id; ?>">
-                  <div class="main-picture" style="background-image: url('<?php echo $string = isMobile() ? $directus_url . $studio->media->url : $directus_url . $studio->Media->url ?>')"></div>
+                  <div class="main-picture" style="background-image: url('<?php echo $directus_url . $studio->Media->url ?>')"></div>
                 </div>
               <?php endforeach; ?>
             </div>
