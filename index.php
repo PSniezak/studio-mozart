@@ -7,10 +7,19 @@ $client = \Directus\SDK\ClientFactory::create('ShUhl3apZ0vZlYQqWHJlg5NNuxb0NeYK'
     'base_url' => $directus_url
 ]);
 
+function isMobile() {
+  return preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackbe‌​rry|iemobile|bolt|bo‌​ost|cricket|docomo|f‌​one|hiptop|mini|oper‌​a mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|‌​webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
+
 $prices = $client->getItems('prices');
 $photographers = $client->getItems('photographers');
-$studios = $client->getItems('studio');
 $home = $client->getItem('others', 1);
+
+if (isMobile()) {
+  $studios = $client->getItems('studio_mobile');
+} else {
+  $studios = $client->getItems('studio');
+}
 
 ?>
 
@@ -225,7 +234,7 @@ $home = $client->getItem('others', 1);
             <div class="studio-slider">
               <?php foreach($studios as $studio): ?>
                 <div class="slideshow" data-id="<?php echo $studio->id; ?>">
-                  <div class="main-picture" style="background-image: url('<?php echo $directus_url . $studio->Media->url; ?>')"></div>
+                  <div class="main-picture" style="background-image: url('<?php echo $string = isMobile() ? $directus_url . $studio->media->url : $directus_url . $studio->Media->url ?>')"></div>
                 </div>
               <?php endforeach; ?>
             </div>
@@ -361,7 +370,7 @@ $home = $client->getItem('others', 1);
             <div class="left">
               <div class="center">
                 <span class="title">Réservations</span>
-                <p>
+                <p class="first">
                   <a href="mailto:contact@studiomozartparis.com">contact@studiomozartparis.com</a><br>
                   <a href="mailto:booking@studiomozartparis.com">booking@studiomozartparis.com</a><br>
                   <a href="mailto:request@studiomozartparis.com">request@studiomozartparis.com</a><br>
@@ -427,6 +436,7 @@ $home = $client->getItem('others', 1);
         <input required type="email" name="email" placeholder="Email *">
         <input required type="tel" name="tel" placeholder="Numéro de téléphone *">
         <input required type="date" name="date" placeholder="Date *">
+        <input required type="time" name="time" placeholder="Heure *">
         <input type="hidden" name="price" value="" class="price-container">
         <input required type="submit" name="submit" value="Envoyer" class="submit">
       </form>

@@ -274,7 +274,8 @@ ul, li {
             #stud.section .container .studio-slider .slick-list .slick-track .slideshow .main-picture {
               width: 100%;
               height: 100%;
-              background-size: cover; }
+              background-size: cover;
+              background-position: center; }
 
 /* PRICING */
 #pricing.section, .pricing-multiple.section {
@@ -344,7 +345,6 @@ ul, li {
       #questions.section .helper .infos p {
         max-width: 95%;
         font-family: 'adelon';
-        text-align: justify;
         font-size: 18px;
         line-height: 20px;
         letter-spacing: 2px; }
@@ -406,7 +406,7 @@ ul, li {
   display: flex; }
   #displays.section .container {
     box-sizing: border-box;
-    padding: 54px 46px;
+    padding: 36px 46px;
     width: 100%;
     height: 100%;
     overflow-x: scroll;
@@ -419,7 +419,7 @@ ul, li {
       #displays.section .container .item:not(:nth-child(4n+0)) {
         padding-right: 48px; }
       #displays.section .container .item:last-child {
-        margin-bottom: 260px; }
+        padding-bottom: 150px; }
       #displays.section .container .item .main-picture {
         width: 100%;
         height: 400px;
@@ -471,8 +471,8 @@ ul, li {
   z-index: 11;
   width: 44px;
   height: 44px;
-  top: calc(36px + 16px);
-  right: 52px;
+  top: calc(37px + 14px);
+  right: 49px;
   cursor: pointer; }
 
 #slideshows .slideshow {
@@ -491,11 +491,11 @@ ul, li {
     padding-right: 36px;
     border: 0; }
     #slideshows .slideshow .container:first-child {
-      padding-left: 46px; }
+      padding-left: 36px; }
     #slideshows .slideshow .container:last-child {
       padding-right: 900px; }
     #slideshows .slideshow .container img {
-      max-height: calc(100vh - 112px); }
+      max-height: calc(100vh - 108px); }
 
 /* MODAL */
 .remodal-overlay {
@@ -522,6 +522,9 @@ ul, li {
       width: 160px;
       border: 1px solid black;
       background-color: transparent; }
+  .remodal-wrapper .remodal form input[type="date"], .remodal-wrapper .remodal form input[type="time"] {
+    width: 150px;
+    display: inline-block; }
 
 .remodal-wrapper .remodal.remodal-confirmation .title {
   margin-top: 0;
@@ -555,11 +558,14 @@ ul, li {
       #location.section .helper .container {
         display: block;
         vertical-align: inherit;
-        padding: 0 36px; }
+        padding: 0 36px;
+        margin-bottom: 75%; }
         #location.section .helper .container .left {
           width: 100%;
           margin: 0;
           text-align: center; }
+          #location.section .helper .container .left .presentation {
+            text-align: left; }
           #location.section .helper .container .left .list {
             display: block;
             margin: 0 auto;
@@ -578,6 +584,12 @@ ul, li {
               margin-bottom: 20%; }
               #location.section .helper .container .left .list.downloads ul li .name {
                 margin-bottom: 8px; }
+  #stud.section .container .studio-slider .slick-arrow img {
+    height: 28px; }
+  #stud.section .container .studio-slider .slick-arrow.slick-prev {
+    left: 24px; }
+  #stud.section .container .studio-slider .slick-arrow.slick-next {
+    right: 24px; }
   /* PRICING */
   #pricing.section, .pricing-multiple.section {
     padding: 0 26px;
@@ -623,7 +635,7 @@ ul, li {
             text-decoration: underline;
             font-family: 'adelon-bold'; }
       #questions.section .helper .columns, #questions.section .helper .columns-fixed {
-        text-align: justify;
+        text-align: left;
         width: 100%;
         height: auto;
         max-height: none;
@@ -704,7 +716,7 @@ ul, li {
         display: block;
         vertical-align: middle; }
         #infos.section .container .left .center, #infos.section .container .right .center, #infos.section .container .helper .center {
-          height: 174px; }
+          height: 226px; }
           #infos.section .container .left .center .title, #infos.section .container .right .center .title, #infos.section .container .helper .center .title {
             font-family: 'adelon-bold';
             font-size: 14px; }
@@ -715,6 +727,8 @@ ul, li {
       #infos.section .container .left {
         margin-top: 0;
         margin-bottom: 0; }
+        #infos.section .container .left .center .first {
+          line-height: 26px; }
       #infos.section .container .right {
         margin-top: 22px; }
   /* SLIDESHOWS */

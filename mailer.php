@@ -24,11 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $mail->Password = "Z89cb/HExCj*RWJo";
   $mail->setFrom('studio.mozart.mailer@gmail.com', 'Studio Mozart - Mailer');
 
-  $mail->addAddress('contact@atroistudio.com', 'Atrois Studio');
+  // $mail->addAddress('booking@studiomozartparis.com', 'Atrois Studio');
+  $mail->addAddress('paulsniezak@gmail.com', 'Atrois Studio');
 
   $mail->Subject = "Studio Mozart - Demande de r&eacute;servation";
-  $mail->Body    = "Prix : ".substr($_POST['price'], 0, 3)." €<br>Nom : ".$_POST['name']."<br>Email : ".$_POST['email']."<br>T&eacute;l&eacute;phone : ".$_POST['tel']."<br>Date : ". date("d M, Y", strtotime($_POST['date']));
-  $mail->AltBody = "Prix : ".substr($_POST['price'], 0, 3)." €<br>Nom : ".$_POST['name']."<br>Email : ".$_POST['email']."<br>T&eacute;l&eacute;phone : ".$_POST['tel']."<br>Date : ". date("d M Y", strtotime($_POST['date']));
+  $mail->Body    = "Prix : ".substr($_POST['price'], 0, 3)." €<br>Nom : ".$_POST['name']."<br>Email : ".$_POST['email']."<br>T&eacute;l&eacute;phone : ".$_POST['tel']."<br>Date : ". date("d M, Y", strtotime($_POST['date']))."<br>Horaire : ".$_POST['time'];
+  $mail->AltBody = "Prix : ".substr($_POST['price'], 0, 3)." €<br>Nom : ".$_POST['name']."<br>Email : ".$_POST['email']."<br>T&eacute;l&eacute;phone : ".$_POST['tel']."<br>Date : ". date("d M Y", strtotime($_POST['date']))."<br>Horaire : ".$_POST['time'];
 
   if ($mail->send()) {
     $mail->ClearAddresses();
