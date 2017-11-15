@@ -37,7 +37,7 @@ $(document).ready(function() {
 		fixedElements: '#header-desktop, #header-mobile, #slideshows',
 		lazyLoading: true,
     touchSensitivity: 30,
-    normalScrollElementTouchThreshold: 5,
+    normalScrollElementTouchThreshold: 15,
 
 		onLeave: function(index, nextIndex, direction) {
       if (isMobile && (nextIndex == 2 || nextIndex == 8 || nextIndex == 9)) {

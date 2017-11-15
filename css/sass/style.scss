@@ -442,6 +442,7 @@ body {
 
       p {
         max-width: 95%;
+        margin-top: 0px;
         font-family: 'adelon';
         font-size: 18px;
         line-height: 20px;
@@ -458,20 +459,19 @@ body {
       margin-top: 28px;
 
       h2 {
+        margin-top: 0;
         font-family: 'adelon';
         font-size: 18px;
         text-transform: uppercase;
       }
 
       .container {
-        margin-top: 26px;
+        margin-top: 24px;
         box-sizing: border-box;
         position: relative;
         max-height: 100%;
 
         p {
-          overflow-x: scroll;
-           -webkit-overflow-scrolling: touch;
           max-width: 95%;
           font-size: 11px;
           line-height: 13px;
@@ -488,6 +488,7 @@ body {
       -webkit-overflow-scrolling: touch;
 
       h2 {
+        margin-top: 0;
         position: absolute;
         top: 66px;
         font-family: 'adelon';
@@ -742,7 +743,6 @@ body {
         display: block;
         vertical-align: inherit;
         padding: 0 36px;
-        margin-bottom: 50%;
         overflow: hidden;
 
         .left {
@@ -750,7 +750,7 @@ body {
           margin: 0;
           text-align: center;
           overflow: hidden;
-          margin-bottom: 50vh;
+          margin-bottom: 10vh;
 
           .presentation {
             text-align: left;
@@ -898,7 +898,6 @@ body {
           box-sizing: border-box;
           position: relative;
           padding-top: 0px;
-          padding-bottom: 0%;
 
           p {
             overflow-x: visible;
@@ -907,7 +906,7 @@ body {
           }
         }
         &:last-child .container {
-          padding-bottom: 100%;
+          padding-bottom: 50%;
         }
       }
     }

@@ -281,16 +281,16 @@ if (isMobile()) {
             </div><!--
           --><div class="grid-4 columns-fixed">
               <h2>MATÉRIEL</h2>
-              <div class="container normal-scroll">
+              <div class="container">
                 <p>
                   <span>Est-ce que vous pouvez louer du matériel en supplément pour ma prise de vue ?</span><br>
                   Oui, notre large réseau de collaborateurs nous permet d’avoir accès à tout le matériel possible. Veuillez nous envoyer la liste exacte du matériel que vous souhaitez pour votre prise de vue au minimum 72h à l’avance à l’adresse <a href="mailto:material@studiomozartparis.com">material@studiomozartparis.com</a>. Des frais de gestion d’un montant de 30$ vous seront facturés en supplément de la location du matériel.
                 </p>
               </div>
             </div><!--
-            --><div class="grid-4 columns">
+            --><div class="grid-4 columns-fixed">
                 <h2>LA RÉSERVATION</h2>
-                <div class="container normal-scroll">
+                <div class="container">
                   <p>
                     <span>Comment puis-je réserver une date pour ma prise de vue ?</span><br>
                     Une fois la formule choisie, vous pourrez remplir l’horaire souhaité, un membre du Studio Mozart prendra contact avec vous par téléphone afin de procéder au paiement d’un accompte de 50% de la somme. Une fois le paiement effectué et validé, vous recevrez une facture avec le règlement intérieur qu’il faudra rendre signé le jour de votre réservation, le plan du studio, ainsi qu’une confirmation de réservation.
@@ -311,19 +311,19 @@ if (isMobile()) {
                     <span>Si j’ai fini avant l’heure prévue, est-ce que je paye la totalité de ma réservation ?</span><br>
                     Oui, toute réservation est due dans son intégralité. Aucun remboursement ne sera effectué. Si vous pensez que votre réservation est trop longue, vous pouvez réserver une demi-journée ou réserver le Studio Mozart à l’heure.
                   </p>
-                  <p>
-                    <span>Comment se déroule le règlement ?</span><br>
-                    Le règlement s’effectue en début de séance. Si toutefois il y aurait un problème lié au matériel ou un dépassement de l’horaire de réservation, le Studio Mozart factureras en supplément.
-                  </p>
-                  <p>
-                    <span>Quels sont les moyens de paiements que vous acceptez ?</span><br>
-                    Nous acceptons les virements bancaires, les espèces ainsi que les chèques de banque. Malheureusement nous ne sommes pas encore équipés de terminal à carte bancaire. Nous n’acceptons pas les chèques, billets de 500 et 200 euros.
-                  </p>
                 </div>
               </div><!--
               --><div class="grid-4 columns-fixed">
                   <h2>DIVERS</h2>
-                  <div class="container normal-scroll">
+                  <div class="container">
+                    <p>
+                      <span>Comment se déroule le règlement ?</span><br>
+                      Le règlement s’effectue en début de séance. Si toutefois il y aurait un problème lié au matériel ou un dépassement de l’horaire de réservation, le Studio Mozart factureras en supplément.
+                    </p>
+                    <p>
+                      <span>Quels sont les moyens de paiements que vous acceptez ?</span><br>
+                      Nous acceptons les virements bancaires, les espèces ainsi que les chèques de banque. Malheureusement nous ne sommes pas encore équipés de terminal à carte bancaire. Nous n’acceptons pas les chèques, billets de 500 et 200 euros.
+                    </p>
                     <p>
                       <span>Est-ce que les lumières et le fond seront mis en place pour ma réservation ?</span><br>
                       Oui, nous montons systématiquement les deux boites à lumière ainsi que le fond photo. Nous souhaitons optimiser le temps de réservation de chaque client.

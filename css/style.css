@@ -350,6 +350,7 @@ body {
       margin-top: 72px; }
       #questions.section .helper .infos p {
         max-width: 95%;
+        margin-top: 0px;
         font-family: 'adelon';
         font-size: 18px;
         line-height: 20px;
@@ -361,17 +362,16 @@ body {
       vertical-align: top;
       margin-top: 28px; }
       #questions.section .helper .columns-fixed h2 {
+        margin-top: 0;
         font-family: 'adelon';
         font-size: 18px;
         text-transform: uppercase; }
       #questions.section .helper .columns-fixed .container {
-        margin-top: 26px;
+        margin-top: 24px;
         box-sizing: border-box;
         position: relative;
         max-height: 100%; }
         #questions.section .helper .columns-fixed .container p {
-          overflow-x: scroll;
-          -webkit-overflow-scrolling: touch;
           max-width: 95%;
           font-size: 11px;
           line-height: 13px; }
@@ -382,6 +382,7 @@ body {
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch; }
       #questions.section .helper .columns h2 {
+        margin-top: 0;
         position: absolute;
         top: 66px;
         font-family: 'adelon';
@@ -565,14 +566,13 @@ body {
         display: block;
         vertical-align: inherit;
         padding: 0 36px;
-        margin-bottom: 50%;
         overflow: hidden; }
         #location.section .helper .container .left {
           width: 100%;
           margin: 0;
           text-align: center;
           overflow: hidden;
-          margin-bottom: 50vh; }
+          margin-bottom: 10vh; }
           #location.section .helper .container .left .presentation {
             text-align: left; }
           #location.section .helper .container .left .list {
@@ -658,14 +658,13 @@ body {
         #questions.section .helper .columns .container, #questions.section .helper .columns-fixed .container {
           box-sizing: border-box;
           position: relative;
-          padding-top: 0px;
-          padding-bottom: 0%; }
+          padding-top: 0px; }
           #questions.section .helper .columns .container p, #questions.section .helper .columns-fixed .container p {
             overflow-x: visible;
             -webkit-overflow-scrolling: auto;
             max-width: 100%; }
         #questions.section .helper .columns:last-child .container, #questions.section .helper .columns-fixed:last-child .container {
-          padding-bottom: 100%; }
+          padding-bottom: 50%; }
   /* PHOTOGRAPHERS */
   #displays.section {
     display: -webkit-box;
