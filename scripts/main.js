@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   var lastScrollTop = 0,
+      lastScrollTopLocation = 0,
       isMobile = false,
       lastHorPos = 0;
 
@@ -35,12 +36,16 @@ $(document).ready(function() {
 		verticalCentered: false,
 		fixedElements: '#header-desktop, #header-mobile, #slideshows',
 		lazyLoading: true,
-    touchSensitivity: 15,
-    normalScrollElementTouchThreshold: 15,
+    touchSensitivity: 30,
+    normalScrollElementTouchThreshold: 5,
 
 		onLeave: function(index, nextIndex, direction) {
       if (isMobile && (nextIndex == 2 || nextIndex == 8 || nextIndex == 9)) {
         $('.normal-scroll, #location, #questions, #displays').scrollTop(1);
+      }
+      if (isMobile) {
+        $('#questions .helper').addClass('normal-scroll');
+        $('#location .helper').addClass('normal-scroll');
       }
       // if ($('.fp-scroller, .iScrollIndicator')) {
       //   $('.fp-scroller, .iScrollIndicator').css('transform', 'translate(0px, 0px)');
@@ -92,16 +97,17 @@ $(document).ready(function() {
 
     $('#location').scroll(function() {
       var st = $(this).scrollTop();
-      if (st > lastScrollTop){
+
+      if (st > lastScrollTopLocation) {
         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-          $.fn.fullpage.moveSectionDown();
+          $('#location .helper').removeClass('normal-scroll');
         }
       } else {
-        if($(this).scrollTop() == 0) {
-          $.fn.fullpage.moveSectionUp();
+        if($(this).scrollTop() <= 0) {
+          $('#location .helper').removeClass('normal-scroll');
         }
       }
-      lastScrollTop = st;
+      lastScrollTopLocation = st;
     });
   }
   $('#stud .studio-slider').slick({
@@ -120,15 +126,17 @@ $(document).ready(function() {
     $('#questions .helper .columns-fixed .container').removeClass('normal-scroll');
     $('#questions .helper').addClass('normal-scroll');
 
-    $('#questions').scroll(function() {
+    $('#questions').scroll(function(e) {
       var st = $(this).scrollTop();
-      if (st > lastScrollTop){
+      console.log('scroll')
+
+      if (st > lastScrollTop) {
         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-          $.fn.fullpage.moveSectionDown();
+          $('#questions .helper').removeClass('normal-scroll');
         }
       } else {
-        if($(this).scrollTop() == 0) {
-          $.fn.fullpage.moveSectionUp();
+        if($(this).scrollTop() <= 0) {
+          $('#questions .helper').removeClass('normal-scroll');
         }
       }
       lastScrollTop = st;
@@ -154,7 +162,7 @@ $(document).ready(function() {
   if ($('#displays .container .item:last-child').offset().top + $('#displays .container .item:last-child').height() - $('#displays').offset().top > $(document).height()) {
     $('#displays .container').addClass('normal-scroll');
 
-    $('#displays .container').scroll(function() {
+    $('#displays .container').scroll(function(e) {
       var st = $(this).scrollTop();
       if (st > lastScrollTop){
         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $mail->addAddress('booking@studiomozartparis.com', 'Atrois Studio');
 
-  $mail->Subject = "Studio Mozart - Demande de r&eacute;servation";
+  $mail->Subject = "Studio Mozart - Demande de réservation";
   $mail->Body    = "Prix : ".substr($_POST['price'], 0, 3)." €<br>Nom : ".$_POST['name']."<br>Email : ".$_POST['email']."<br>T&eacute;l&eacute;phone : ".$_POST['tel']."<br>Date : ". date("d M, Y", strtotime($_POST['date']))."<br>Horaire : ".$_POST['time'];
   $mail->AltBody = "Prix : ".substr($_POST['price'], 0, 3)." €<br>Nom : ".$_POST['name']."<br>Email : ".$_POST['email']."<br>T&eacute;l&eacute;phone : ".$_POST['tel']."<br>Date : ". date("d M Y", strtotime($_POST['date']))."<br>Horaire : ".$_POST['time'];
 

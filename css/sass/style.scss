@@ -21,6 +21,14 @@ ul, li {
   display: none;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling:touch;
+}
+
 /* HEADER DESKTOP */
 #header-desktop {
   box-sizing: border-box;
@@ -423,7 +431,6 @@ ul, li {
 #questions.section {
   padding: 0 46px;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
 
   .helper {
     max-height: 100%;
@@ -724,23 +731,26 @@ ul, li {
   /* LOCATION */
   #location.section {
     overflow-x: hidden;
+    -webkit-overflow-scrolling:touch;
 
     .helper {
       display: block;
       max-height: 100%;
       height: 100%;
-      margin-top: 10%;
 
       .container {
         display: block;
         vertical-align: inherit;
         padding: 0 36px;
-        margin-bottom: 75%;
+        margin-bottom: 50%;
+        overflow: hidden;
 
         .left {
           width: 100%;
           margin: 0;
           text-align: center;
+          overflow: hidden;
+          margin-bottom: 50vh;
 
           .presentation {
             text-align: left;
@@ -752,6 +762,7 @@ ul, li {
             bottom: auto;
             width: 100%;
             overflow: hidden;
+            -webkit-overflow-scrolling:touch;
 
             &.downloads, &.proximity {
               width: 100%;
@@ -769,8 +780,6 @@ ul, li {
               }
             }
             &.downloads {
-              margin-bottom: 20%;
-
               ul li {
                 .name {
                   margin-bottom: 8px;
