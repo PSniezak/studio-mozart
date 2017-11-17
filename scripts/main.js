@@ -36,7 +36,7 @@ $(document).ready(function() {
 		verticalCentered: false,
 		fixedElements: '#header-desktop, #header-mobile, #slideshows',
 		lazyLoading: true,
-    touchSensitivity: 30,
+    touchSensitivity: 20,
     normalScrollElementTouchThreshold: 15,
 
 		onLeave: function(index, nextIndex, direction) {
