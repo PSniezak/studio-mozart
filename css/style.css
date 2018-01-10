@@ -312,6 +312,11 @@ body {
         font-family: 'din-light'; }
         #pricing.section .grid-4 .informations span.supp, #pricing.section .grid-4 .informations b.supp, #pricing.section .grid-4 .informations strong.supp, .pricing-multiple.section .grid-4 .informations span.supp, .pricing-multiple.section .grid-4 .informations b.supp, .pricing-multiple.section .grid-4 .informations strong.supp {
           font-size: 9px; }
+      #pricing.section .grid-4 .informations div strong, #pricing.section .grid-4 .informations div b, .pricing-multiple.section .grid-4 .informations div strong, .pricing-multiple.section .grid-4 .informations div b {
+        color: #9b9b9b;
+        font-family: 'din-light'; }
+        #pricing.section .grid-4 .informations div strong.supp, #pricing.section .grid-4 .informations div b.supp, .pricing-multiple.section .grid-4 .informations div strong.supp, .pricing-multiple.section .grid-4 .informations div b.supp {
+          font-size: 9px; }
       #pricing.section .grid-4 .informations div, .pricing-multiple.section .grid-4 .informations div {
         color: black;
         font-size: 11px;

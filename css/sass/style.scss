@@ -390,6 +390,14 @@ body {
           font-size: 9px;
         }
       }
+      div strong, div b {
+        color: #9b9b9b;
+        font-family: 'din-light';
+
+        &.supp {
+          font-size: 9px;
+        }
+      }
       div {
         color: black;
         font-size: 11px;
